@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>PS4 Jailbreak 6.72</title>
+<meta charset="utf-8"/>
+<body>
+<script>
+function jb_finished()
+{
+    if(main_ret == 179 || main_ret == 0)
+    {
+        alert("Jailbreak Complete!");
+    }
+    else
+        alert("Jailbreak failed! Reboot your PS4 and try again.");
+}
+
+function mira_finished()
+{
+    alert("You're all set!");
+}
+
+function SC(x)
+{
+    return '<script src="'+x+'.js"></scr'+'ipt>';
+}
+
+function MIRA(x)
+{
+    return SC('mira/'+x);
+}
+
+function load_mira()
+{
+    document.write(MIRA('mira')+MIRA('mira2')+MIRA('c-code')+'<script>mira_finished();</scr'+'ipt>');
+}
+
+function load_netcat()
+{
+    document.write(MIRA('c-code')+'<script>mira_finished();</scr'+'ipt>');
+}
+</script>
+<script>function print(){}</script>
+<script src="common/exploit.js"></script>
+<script src="common/helpers.js"></script>
+<script src="common/malloc.js"></script>
+<script src="common/rop.js"></script>
+<script src="common/syscalls.js"></script>
+<script src="common/syscalls2.js"></script>
+<script src="jb/c-code.js"></script>
+<script>jb_finished();</script>
+<table align="center" width="500px">
+<tr>
+<td width="33%"><a href="#" onclick="load_mira(); return false">MIRA</a></td>
+<td width="33%"><a href="#" onclick="load_netcat(); return false">NETCAT</a></td>
+</tr>
+</table>
+</body>
+</html>
