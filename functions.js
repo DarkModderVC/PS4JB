@@ -13,7 +13,7 @@ function jb_finished()
 
 function mira_finished()
 {
-	setTimeout(function(){alert("You're all set!!"); }, 7000);
+	setTimeout(function(){alert("You're all set!!"); }, 5000);
 }
 
 function payload_finished()
@@ -89,6 +89,54 @@ function load_mira()
 	}
 }
 
+function load_mira_nohb()
+{
+    document.write(MIRA('mira')+MIRA('mira3')+MIRA('c-code')+'<script>mira_finished();</scr'+'ipt>');
+	if(document.getElementById('table') == null){
+		document.write('<table id="table" align="center" style="width:500px;margin-top:150px;">'+
+						'<tr>'+
+						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
+						'</tr>'+
+						'<tr>'+
+						'<td align="center" width="50%"><a href="#" onclick="load_mira(); return false">MIRA + HEN</a></td>'+
+						'<td align="center" width="50%"><a href="#" onclick="load_netcat(); return false">NETCAT</a></td>'+
+						'</tr>'+
+						'<tr><td><br/></td></tr>'+
+						'<tr>'+
+						'<td colspan="2" align="center"><h1>Payloads</h1></td>'+
+						'</tr>'+
+						'<tr>'+
+						'<td align="center" width="50%"><a href="#" onclick="load_payload(\'app2usb\'); return false">App2USB</a></td>'+
+						'<td align="center" width="50%"><a href="#" onclick="load_payload(\'backup\'); return false">BackUp</a></td>'+
+						'</tr><tr><td><br/></td></tr>'+
+						'<tr>'+
+						'<td align="center" width="50%"><a href="#" onclick="load_payload(\'disableupdates\'); return false">Disable Updates</a></td>'+
+						'<td align="center" width="50%"><a href="#" onclick="load_payload(\'enableupdates\'); return false">Enable Updates</a></td>'+
+						'</tr><tr><td><br/></td></tr>'+
+						'<tr>'+
+						'<td align="center" width="50%"><a href="#" onclick="load_payload(\'dumper\'); return false">Dumper</a></td>'+
+						'<td align="center" width="50%"><a href="#" onclick="load_payload(\'kerneldumper\'); return false">Kernel Dumper</a></td>'+
+						'</tr><tr><td><br/></td></tr>'+
+						'<tr>'+
+						'<td align="center" width="50%"><a href="#" onclick="load_payload(\'enablebrowser\'); return false">Enable Browser</a></td>'+
+						'<td align="center" width="50%"><a href="#" onclick="load_payload(\'fanthreshold\'); return false">Fan Threshold</a></td>'+
+						'</tr><tr><td><br/></td></tr>'+
+						'<tr>'+
+						'<td align="center" width="50%"><a href="#" onclick="load_payload(\'ftp\'); return false">FTP</a></td>'+
+						'<td align="center" width="50%"><a href="#" onclick="load_payload(\'historyblocker\'); return false">History Blocker</a></td>'+
+						'</tr><tr><td><br/></td></tr>'+
+						'<tr>'+
+						'<td align="center" width="50%"><a href="#" onclick="load_payload(\'kernelclock\'); return false">Kernel Clock</a></td>'+
+						'<td align="center" width="50%"><a href="#" onclick="load_payload(\'linuxloader\'); return false">Linux Loader</a></td>'+
+						'</tr><tr><td><br/></td></tr>'+
+						'<tr>'+
+						'<td align="center" width="50%"><a href="#" onclick="load_payload(\'restore\'); return false">Restore</a></td>'+
+						'<td align="center" width="50%"><a href="#" onclick="load_payload(\'rifrenamer\'); return false">RIF Renamer</a></td>'+
+						'</tr>'+
+						'</table>');
+	}
+}
+
 function load_JB()
 {	
 	confirmJailbreak = confirm("Shall We Start with PS4 Jailbreak 6.72?\nNote: Click 'Cancel' if Jailbreak is already Complete after Starting your PS4!!")
@@ -99,7 +147,7 @@ function load_JB()
 
 function load_netcat()
 {
-    document.write(MIRA('c-code')+'<script>mira_finished();</scr'+'ipt>');
+    document.write(MIRA('mira')+MIRA('c-code')+'<script>alert("Awaiting Payload !!");</scr'+'ipt>');
 	if(document.getElementById('table') == null){
 		document.write('<table id="table" align="center" style="width:500px;margin-top:150px;">'+
 						'<tr>'+
