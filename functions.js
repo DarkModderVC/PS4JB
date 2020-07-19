@@ -1,4 +1,4 @@
-var confirmJailbreak;
+var confirmJailbreak = true;
 function jb_finished()
 {
     if(main_ret == 179 || main_ret == 0)
@@ -13,7 +13,7 @@ function jb_finished()
 
 function mira_finished()
 {
-    alert("You're all set!\nNote: Click Close[Internet Browser] !!");
+	setTimeout(function(){alert("You're all set!!"); }, 5000);
 }
 
 function payload_finished()
