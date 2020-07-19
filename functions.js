@@ -91,7 +91,7 @@ function load_mira()
 
 function load_JB()
 {	
-	confirmJailbreak = confirm("Shall We Start with PS4 Jailbreak 6.72?\nNote: Click 'No' if Jailbreak is already Complete after Starting your PS4!!")
+	confirmJailbreak = confirm("Shall We Start with PS4 Jailbreak 6.72?\nNote: Click 'Cancel' if Jailbreak is already Complete after Starting your PS4!!")
 	if(confirmJailbreak){
 		document.write(JB('c-code')+'<script>jb_finished();</scr'+'ipt>');
 	}
