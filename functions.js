@@ -13,7 +13,7 @@ function jb_finished()
 
 function mira_finished()
 {
-	setTimeout(function(){alert("You're all set!!"); }, 5000);
+	setTimeout(function(){alert("You're all set!!"); }, 7000);
 }
 
 function payload_finished()
