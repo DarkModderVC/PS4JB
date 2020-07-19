@@ -50,8 +50,9 @@ function load_mira()
 						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
 						'</tr>'+
 						'<tr>'+
-						'<td align="center" width="50%"><a href="#" onclick="load_mira(); return false">MIRA + HEN</a></td>'+
-						'<td align="center" width="50%"><a href="#" onclick="load_netcat(); return false">NETCAT</a></td>'+
+						'<td align="center" colspan="2"><a href="#" onclick="load_mira(); return false">MIRA + HEN</a>'+
+						'<a href="#" onclick="load_mira_nohb(); return false" style="padding-left:50px;padding-right:50px">MIRA No HB</a>'+
+						'<a href="#" onclick="load_netcat(); return false">Bin Loader</a></td>'+
 						'</tr>'+
 						'<tr><td><br/></td></tr>'+
 						'<tr>'+
@@ -98,8 +99,9 @@ function load_mira_nohb()
 						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
 						'</tr>'+
 						'<tr>'+
-						'<td align="center" width="50%"><a href="#" onclick="load_mira(); return false">MIRA + HEN</a></td>'+
-						'<td align="center" width="50%"><a href="#" onclick="load_netcat(); return false">NETCAT</a></td>'+
+						'<td align="center" colspan="2"><a href="#" onclick="load_mira(); return false">MIRA + HEN</a>'+
+						'<a href="#" onclick="load_mira_nohb(); return false" style="padding-left:50px;padding-right:50px">MIRA No HB</a>'+
+						'<a href="#" onclick="load_netcat(); return false">Bin Loader</a></td>'+
 						'</tr>'+
 						'<tr><td><br/></td></tr>'+
 						'<tr>'+
@@ -154,8 +156,9 @@ function load_netcat()
 						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
 						'</tr>'+
 						'<tr>'+
-						'<td align="center" width="50%"><a href="#" onclick="load_mira(); return false">MIRA + HEN</a></td>'+
-						'<td align="center" width="50%"><a href="#" onclick="load_netcat(); return false">NETCAT</a></td>'+
+						'<td align="center" colspan="2"><a href="#" onclick="load_mira(); return false">MIRA + HEN</a>'+
+						'<a href="#" onclick="load_mira_nohb(); return false" style="padding-left:50px;padding-right:50px">MIRA No HB</a>'+
+						'<a href="#" onclick="load_netcat(); return false">Bin Loader</a></td>'+
 						'</tr>'+
 						'<tr><td><br/></td></tr>'+
 						'<tr>'+
@@ -202,8 +205,9 @@ function load_payload(payload)
 						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
 						'</tr>'+
 						'<tr>'+
-						'<td align="center" width="50%"><a href="#" onclick="load_mira(); return false">MIRA + HEN</a></td>'+
-						'<td align="center" width="50%"><a href="#" onclick="load_netcat(); return false">NETCAT</a></td>'+
+						'<td align="center" colspan="2"><a href="#" onclick="load_mira(); return false">MIRA + HEN</a>'+
+						'<a href="#" onclick="load_mira_nohb(); return false" style="padding-left:50px;padding-right:50px">MIRA No HB</a>'+
+						'<a href="#" onclick="load_netcat(); return false">Bin Loader</a></td>'+
 						'</tr>'+
 						'<tr><td><br/></td></tr>'+
 						'<tr>'+
