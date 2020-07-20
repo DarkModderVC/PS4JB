@@ -13,8 +13,8 @@ function jb_finished()
 
 function mira_finished()
 {
-	setTimeout(function(){alert("Stabilizing your PS4.. Please Wait this might take few seconds!!\nNote: Wait till Success message appears !! "); }, 5000);
-	setTimeout(function(){alert("Load Successful!!");}, 20000);
+	setTimeout(function(){alert("Load Successful!!"); }, 10000);
+	//setTimeout(function(){alert("Load Successful!!");}, 20000);
 }
 
 function payload_finished()
