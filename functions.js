@@ -93,7 +93,7 @@ function load_mira()
 
 function load_mira_nohb()
 {
-    document.write(MIRA('mira')+MIRA('mira3')+MIRA('c-code')+'<script>mira_finished();</scr'+'ipt>');
+    document.write(MIRA('mira')+MIRA('miranohb')+MIRA('c-code')+'<script>mira_finished();</scr'+'ipt>');
 	if(document.getElementById('table') == null){
 		document.write('<table id="table" align="center" style="width:500px;margin-top:150px;">'+
 						'<tr>'+
