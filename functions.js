@@ -13,8 +13,8 @@ function jb_finished()
 
 function mira_finished()
 {
-	setTimeout(function(){alert("Load Successful!!"); }, 10000);
-	//setTimeout(function(){alert("Load Successful!!");}, 20000);
+	setTimeout(function(){alert("Load Successful!!"); }, 8000);
+	alert("I accidentally updated my PS4 to latest version and out of the JB scene right now, If you think my version of exploit is stable Please contribute to buy me a PS4 6.72 and get back to JB scene.\n Donate me at: https://paypal.me/darkmodder");
 }
 
 function payload_finished()
