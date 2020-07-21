@@ -46,7 +46,8 @@ function load_mira()
 {
     document.write(MIRA('mira')+MIRA('mira2')+MIRA('c-code')+'<script>mira_finished();</scr'+'ipt>');
 	if(document.getElementById('table') == null){
-		document.write('<table id="table" align="center" style="width:500px;margin-top:150px;">'+
+		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">I accidentally updated my PS4 to latest version and out of the JB scene right now, If you think my version of exploit is stable Please contribute to buy me a PS4 6.72 and get back to JB scene. Donate me at: https://paypal.me/darkmodder</marquee>'+
+						'<table align="center" style="width:500px;margin-top:30px;">'+
 						'<tr>'+
 						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
 						'</tr>'+
@@ -95,7 +96,8 @@ function load_mira_nohb()
 {
     document.write(MIRA('mira')+MIRA('miranohb')+MIRA('c-code')+'<script>mira_finished();</scr'+'ipt>');
 	if(document.getElementById('table') == null){
-		document.write('<table id="table" align="center" style="width:500px;margin-top:150px;">'+
+		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">I accidentally updated my PS4 to latest version and out of the JB scene right now, If you think my version of exploit is stable Please contribute to buy me a PS4 6.72 and get back to JB scene. Donate me at: https://paypal.me/darkmodder</marquee>'+
+						'<table align="center" style="width:500px;margin-top:30px;">'+
 						'<tr>'+
 						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
 						'</tr>'+
@@ -152,7 +154,8 @@ function load_netcat()
 {
     document.write(MIRA('mira')+MIRA('c-code')+'<script>alert("Awaiting Payload !!");</scr'+'ipt>');
 	if(document.getElementById('table') == null){
-		document.write('<table id="table" align="center" style="width:500px;margin-top:150px;">'+
+		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">I accidentally updated my PS4 to latest version and out of the JB scene right now, If you think my version of exploit is stable Please contribute to buy me a PS4 6.72 and get back to JB scene. Donate me at: https://paypal.me/darkmodder</marquee>'+
+						'<table align="center" style="width:500px;margin-top:30px;">'+
 						'<tr>'+
 						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
 						'</tr>'+
@@ -201,7 +204,8 @@ function load_payload(payload)
 {
     document.write(PAYLOAD('mira')+PAYLOAD(payload)+PAYLOAD('c-code')+'<script>payload_finished();</scr'+'ipt>');
 	if(document.getElementById('table') == null){
-		document.write('<table id="table" align="center" style="width:500px;margin-top:150px;">'+
+		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">I accidentally updated my PS4 to latest version and out of the JB scene right now, If you think my version of exploit is stable Please contribute to buy me a PS4 6.72 and get back to JB scene. Donate me at: https://paypal.me/darkmodder</marquee>'+
+						'<table align="center" style="width:500px;margin-top:30px;">'+
 						'<tr>'+
 						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
 						'</tr>'+
