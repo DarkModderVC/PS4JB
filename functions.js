@@ -52,6 +52,7 @@ function load_mira()
 						'<td colspan="2" align="center"><h1 style="color:red">Contributors</h1></td>'+
 						'</tr>'+
 						'<tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
+						'<td>$10</td></tr><tr style="font-size:20px;"><td>Vigneshh1</td>'+
 						'<td>$10</td></tr>'+
 						'</table>'+
 						'<table align="center" style="width:500px;margin-top:30px;padding-right:130px;">'+
@@ -109,6 +110,7 @@ function load_mira_nohb()
 						'<td colspan="2" align="center"><h1 style="color:red">Contributors</h1></td>'+
 						'</tr>'+
 						'<tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
+						'<td>$10</td></tr><tr style="font-size:20px;"><td>Vigneshh1</td>'+
 						'<td>$10</td></tr>'+
 						'</table>'+
 						'<table align="center" style="width:500px;margin-top:30px;padding-right:130px;">'+
@@ -174,6 +176,7 @@ function load_netcat()
 						'<td colspan="2" align="center"><h1 style="color:red">Contributors</h1></td>'+
 						'</tr>'+
 						'<tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
+						'<td>$10</td></tr><tr style="font-size:20px;"><td>Vigneshh1</td>'+
 						'<td>$10</td></tr>'+
 						'</table>'+
 						'<table align="center" style="width:500px;margin-top:30px;padding-right:130px;">'+
@@ -231,6 +234,7 @@ function load_payload(payload)
 						'<td colspan="2" align="center"><h1 style="color:red">Contributors</h1></td>'+
 						'</tr>'+
 						'<tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
+						'<td>$10</td></tr><tr style="font-size:20px;"><td>Vigneshh1</td>'+
 						'<td>$10</td></tr>'+
 						'</table>'+
 						'<table align="center" style="width:500px;margin-top:30px;padding-right:130px;">'+
