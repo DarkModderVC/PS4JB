@@ -14,7 +14,6 @@ function jb_finished()
 function mira_finished()
 {
 	setTimeout(function(){alert("Load Successful!!"); }, 8000);
-	alert("I had accidentally updated my PS4 to latest version and I am out of the JB scene right now, If you think my version of exploit is stable, please contribute to Buy me a PS4 6.72 and help me get back to JB scene.\nDonate me at: https://paypal.me/darkmodder");
 }
 
 function payload_finished()
@@ -51,7 +50,8 @@ function load_mira()
 						'<tr>'+
 						'<td colspan="2" align="center"><h1 style="color:red">Contributors</h1></td>'+
 						'</tr>'+
-						'<tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
+						'<tr style="font-size:20px;">blimblim04 of PSXHAX<td></td>'+
+						'<td>$400</td></tr><tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
 						'<td>$10</td></tr><tr style="font-size:20px;"><td>Vigneshh1</td>'+
 						'<td>$10</td></tr>'+
 						'</table>'+
@@ -109,7 +109,8 @@ function load_mira_nohb()
 						'<tr>'+
 						'<td colspan="2" align="center"><h1 style="color:red">Contributors</h1></td>'+
 						'</tr>'+
-						'<tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
+						'<tr style="font-size:20px;">blimblim04 of PSXHAX<td></td>'+
+						'<td>$400</td></tr><tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
 						'<td>$10</td></tr><tr style="font-size:20px;"><td>Vigneshh1</td>'+
 						'<td>$10</td></tr>'+
 						'</table>'+
@@ -175,7 +176,8 @@ function load_netcat()
 						'<tr>'+
 						'<td colspan="2" align="center"><h1 style="color:red">Contributors</h1></td>'+
 						'</tr>'+
-						'<tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
+						'<tr style="font-size:20px;">blimblim04 of PSXHAX<td></td>'+
+						'<td>$400</td></tr><tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
 						'<td>$10</td></tr><tr style="font-size:20px;"><td>Vigneshh1</td>'+
 						'<td>$10</td></tr>'+
 						'</table>'+
@@ -233,7 +235,8 @@ function load_payload(payload)
 						'<tr>'+
 						'<td colspan="2" align="center"><h1 style="color:red">Contributors</h1></td>'+
 						'</tr>'+
-						'<tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
+						'<tr style="font-size:20px;">blimblim04 of PSXHAX<td></td>'+
+						'<td>$400</td></tr><tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
 						'<td>$10</td></tr><tr style="font-size:20px;"><td>Vigneshh1</td>'+
 						'<td>$10</td></tr>'+
 						'</table>'+
