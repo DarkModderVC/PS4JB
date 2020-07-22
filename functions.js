@@ -45,12 +45,12 @@ function load_mira()
 {
     document.write(MIRA('mira')+MIRA('mira2')+MIRA('c-code')+'<script>mira_finished();</scr'+'ipt>');
 	if(document.getElementById('table') == null){
-		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">I had accidentally updated my PS4 to latest version and I am out of the JB scene right now, If you think my version of exploit is stable, please contribute to buy me a PS4 6.72 and help me get back to JB scene. Donate me at: https://paypal.me/darkmodder</marquee>'+
+		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">Thanks a lot @blimblim04 of PSXHAX, you made my day Sir !! I can get my PS4 within 2 days or so. Hoping to test the offline Exploit soon and share it by this weekend !!</marquee>'+
 						'<div><table style="padding-left:30px;float: left;">'+
 						'<tr>'+
 						'<td colspan="2" align="center"><h1 style="color:red">Contributors</h1></td>'+
 						'</tr>'+
-						'<tr style="font-size:20px;">blimblim04 of PSXHAX<td></td>'+
+						'<tr style="font-size:20px;"><td>blimblim04 of PSXHAX &nbsp;&nbsp;</td>'+
 						'<td>$400</td></tr><tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
 						'<td>$10</td></tr><tr style="font-size:20px;"><td>Vigneshh1</td>'+
 						'<td>$10</td></tr>'+
@@ -104,12 +104,12 @@ function load_mira_nohb()
 {
     document.write(MIRA('mira')+MIRA('miranohb')+MIRA('c-code')+'<script>mira_finished();</scr'+'ipt>');
 	if(document.getElementById('table') == null){
-		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">I had accidentally updated my PS4 to latest version and I am out of the JB scene right now, If you think my version of exploit is stable, please contribute to buy me a PS4 6.72 and help me get back to JB scene. Donate me at: https://paypal.me/darkmodder</marquee>'+
+		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">Thanks a lot @blimblim04 of PSXHAX, you made my day Sir !! I can get my PS4 within 2 days or so. Hoping to test the offline Exploit soon and share it by this weekend !!</marquee>'+
 						'<div><table style="padding-left:30px;float: left;">'+
 						'<tr>'+
 						'<td colspan="2" align="center"><h1 style="color:red">Contributors</h1></td>'+
 						'</tr>'+
-						'<tr style="font-size:20px;">blimblim04 of PSXHAX<td></td>'+
+						'<tr style="font-size:20px;"><td>blimblim04 of PSXHAX &nbsp;&nbsp;</td>'+
 						'<td>$400</td></tr><tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
 						'<td>$10</td></tr><tr style="font-size:20px;"><td>Vigneshh1</td>'+
 						'<td>$10</td></tr>'+
@@ -171,12 +171,12 @@ function load_netcat()
 {
     document.write(MIRA('mira')+MIRA('c-code')+'<script>alert("Awaiting Payload !!");</scr'+'ipt>');
 	if(document.getElementById('table') == null){
-		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">I had accidentally updated my PS4 to latest version and I am out of the JB scene right now, If you think my version of exploit is stable, please contribute to buy me a PS4 6.72 and help me get back to JB scene. Donate me at: https://paypal.me/darkmodder</marquee>'+
+		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">Thanks a lot @blimblim04 of PSXHAX, you made my day Sir !! I can get my PS4 within 2 days or so. Hoping to test the offline Exploit soon and share it by this weekend !!</marquee>'+
 						'<div><table style="padding-left:30px;float: left;">'+
 						'<tr>'+
 						'<td colspan="2" align="center"><h1 style="color:red">Contributors</h1></td>'+
 						'</tr>'+
-						'<tr style="font-size:20px;">blimblim04 of PSXHAX<td></td>'+
+						'<tr style="font-size:20px;"><td>blimblim04 of PSXHAX &nbsp;&nbsp;</td>'+
 						'<td>$400</td></tr><tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
 						'<td>$10</td></tr><tr style="font-size:20px;"><td>Vigneshh1</td>'+
 						'<td>$10</td></tr>'+
@@ -230,12 +230,12 @@ function load_payload(payload)
 {
     document.write(PAYLOAD('mira')+PAYLOAD(payload)+PAYLOAD('c-code')+'<script>payload_finished();</scr'+'ipt>');
 	if(document.getElementById('table') == null){
-		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">I had accidentally updated my PS4 to latest version and I am out of the JB scene right now, If you think my version of exploit is stable, please contribute to buy me a PS4 6.72 and help me get back to JB scene. Donate me at: https://paypal.me/darkmodder</marquee>'+
+		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">Thanks a lot @blimblim04 of PSXHAX, you made my day Sir !! I can get my PS4 within 2 days or so. Hoping to test the offline Exploit soon and share it by this weekend !!</marquee>'+
 						'<div><table style="padding-left:30px;float: left;">'+
 						'<tr>'+
 						'<td colspan="2" align="center"><h1 style="color:red">Contributors</h1></td>'+
 						'</tr>'+
-						'<tr style="font-size:20px;">blimblim04 of PSXHAX<td></td>'+
+						'<tr style="font-size:20px;"><td>blimblim04 of PSXHAX &nbsp;&nbsp;</td>'+
 						'<td>$400</td></tr><tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
 						'<td>$10</td></tr><tr style="font-size:20px;"><td>Vigneshh1</td>'+
 						'<td>$10</td></tr>'+
