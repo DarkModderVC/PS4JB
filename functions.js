@@ -2,13 +2,10 @@ var confirmJailbreak = true;
 function jb_finished()
 {
     if(main_ret == 179 || main_ret == 0){
-		alert("Jailbreak Complete!");
-		if (window.jQuery != undefined) {
-			alert('Page Caching started !! Click OK and Leave the page as such for few seconds');
-			setTimeout(function(){alert("Page Cached Successfully!!"); }, 12000);
-		}
-	} else
+	alert("Jailbreak Complete!");
+    } else{
         alert("Jailbreak failed! Reboot your PS4 and try again.");
+    }
 }
 
 function mira_finished()
@@ -196,9 +193,6 @@ function load_JB()
 	confirmJailbreak = confirm("Shall We Start with PS4 Jailbreak 6.72?\nNote: Click 'Cancel' if Jailbreak is already Complete after Starting your PS4!!")
 	if(confirmJailbreak){
 		document.write(JB('c-code')+'<script>jb_finished();</scr'+'ipt>');
-	}else if (window.jQuery != undefined) {
-		alert('Page Caching started !! Click OK and Leave the page as such for few seconds');
-		setTimeout(function(){alert("Page Cached Successfully!!"); }, 12000);
 	}
 }
 
