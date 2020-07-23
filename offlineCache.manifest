@@ -1,0 +1,43 @@
+CACHE MANIFEST
+# v1.0 : 23-07-2020
+ 
+CACHE:
+# pages
+index.html
+ 
+# scripts
+functions.js
+common/exploit.js
+common/expl.js
+common/helpers.js
+common/malloc.js
+common/rop.js
+common/syscalls.js
+common/syscalls2.js
+jb/c-code.js
+mira/c-code.js
+mira/mira.js
+mira/mira2.js
+mira/miranohb.js
+payloads/app2usb.js
+payloads/backup.js
+payloads/c-code.js
+payloads/disableupdates.js
+payloads/dumper.js
+payloads/enablebrowser.js
+payloads/enableupdates.js
+payloads/fanthreshold.js
+payloads/ftp.js
+payloads/historyblocker.js
+payloads/kernelclock.js
+payloads/kerneldumper.js
+payloads/linuxloader.js
+payloads/mira.js
+payloads/restore.js
+payloads/rifrenamer.js
+ 
+NETWORK:
+index.html
+ 
+FALLBACK:
+/ /index.html
