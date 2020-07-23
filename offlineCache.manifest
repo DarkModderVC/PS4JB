@@ -8,7 +8,6 @@ index.html
 # scripts
 functions.js
 common/exploit.js
-common/expl.js
 common/helpers.js
 common/malloc.js
 common/rop.js
