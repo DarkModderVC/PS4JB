@@ -20,7 +20,7 @@
 }
 </style>
 <body>
-<script>window.applicationCache.ondownloading=function(){alert("Page Caching started !!")};window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML="<h3 style='color:red'>Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"</h3>"};window.applicationCache.oncached=function(){alert("Page Cached Successfully!!")};</script>
+<script>window.applicationCache.ondownloading=function(){alert("Page Caching started !!")};window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML="<h3 style='color:green'>Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed</h3>"};window.applicationCache.oncached=function(){alert("Page Cached Successfully!!")};</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="functions.js"></script>
 <script>function print(){}</script>
