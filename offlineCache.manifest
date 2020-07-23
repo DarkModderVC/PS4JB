@@ -37,7 +37,4 @@ payloads/restore.js
 payloads/rifrenamer.js
  
 NETWORK:
-index.html
- 
-FALLBACK:
-/ /index.html
+*
