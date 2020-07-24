@@ -198,7 +198,7 @@ function load_JB()
 
 function load_netcat()
 {
-    document.write(MIRA('mira')+MIRA('c-code')+'<script>alert("Awaiting Payload !!");</scr'+'ipt>');
+    document.write(MIRA('c-code')+'<script>alert("Awaiting Payload !!");</scr'+'ipt>');
 	if(document.getElementById('table') == null){
 		document.write('<style>'+
 						'.button {'+
