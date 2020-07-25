@@ -73,7 +73,7 @@ function load_netcat()
 						'</tr>'+
 						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'mirahen\'); return false" style="width:28%">MIRA + HEN</a>&nbsp;'+
-						'<a href="#" class="button" onclick="load_payload(\'mirahohb\'); return false" style="width:28%">MIRA No HB</a>&nbsp;'+
+						'<a href="#" class="button" onclick="load_payload(\'miranohb\'); return false" style="width:28%">MIRA No HB</a>&nbsp;'+
 						'<a href="#" class="button" onclick="load_netcat(); return false" style="width:28%">Bin Loader</a></td>'+
 						'</tr>'+
 						'<tr><td><br/></td></tr>'+
@@ -149,7 +149,7 @@ function load_payload(payload)
 						'</tr>'+
 						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'mirahen\'); return false" style="width:28%">MIRA + HEN</a>&nbsp;'+
-						'<a href="#" class="button" onclick="load_payload(\'mirahohb\'); return false" style="width:28%">MIRA No HB</a>&nbsp;'+
+						'<a href="#" class="button" onclick="load_payload(\'miranohb\'); return false" style="width:28%">MIRA No HB</a>&nbsp;'+
 						'<a href="#" class="button" onclick="load_netcat(); return false" style="width:28%">Bin Loader</a></td>'+
 						'</tr>'+
 						'<tr><td><br/></td></tr>'+
