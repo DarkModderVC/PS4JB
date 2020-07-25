@@ -13,14 +13,17 @@ common/malloc.js
 common/rop.js
 common/syscalls.js
 common/syscalls2.js
-jb/c-code.js
-mira/c-code.js
-mira/mira.js
-mira/mira2.js
-mira/miranohb.js
+jb/set1.js
+jb/set2.js
+jb/set3.js
+jb/set4.js
+jb/jb.js
+payloads/mira.js
+payloads/mirahen.js
+payloads/miranohb.js
+payloads/c-code.js
 payloads/app2usb.js
 payloads/backup.js
-payloads/c-code.js
 payloads/disableupdates.js
 payloads/dumper.js
 payloads/enablebrowser.js
@@ -31,7 +34,6 @@ payloads/historyblocker.js
 payloads/kernelclock.js
 payloads/kerneldumper.js
 payloads/linuxloader.js
-payloads/mira.js
 payloads/restore.js
 payloads/rifrenamer.js
  
