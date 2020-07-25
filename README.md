@@ -1,6 +1,6 @@
 # PS4JB
 
-This is a full chain exploit for PS4 firmware 6.72. This is somewhat stable than sleirsgoevy's exploit.
+This is an Offline full chain exploit for PS4 firmware 6.72.
 
 ## Credits
 
