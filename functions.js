@@ -56,18 +56,9 @@ function load_netcat()
 						'  color: White;'+
 						'}'+
 						'</style>');
-		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">Thanks a lot @blimblim04 of PSXHAX !! OFFLINE EXPLOIT Released, the scripts & payloads gets automatically cached when you stay on this page !!</marquee>'+
-						'<div><table style="padding-left:30px;float: left;">'+
-						'<tr>'+
-						'<td colspan="2" align="center"><h1 style="color:red">Contributors</h1></td>'+
-						'</tr>'+
-						'<tr style="font-size:20px;"><td>blimblim04 of PSXHAX &nbsp;&nbsp;</td>'+
-						'<td>$400</td></tr><tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
-						'<td>$10</td></tr><tr style="font-size:20px;"><td>Vigneshh1</td>'+
-						'<td>$10</td></tr><tr style="font-size:20px;"><td>Willyamy Vieira Lima</td>'+
-						'<td>$1.90</td></tr>'+
-						'</table>'+
-						'<table align="center" style="width:600px;margin-top:30px;padding-right:130px;">'+
+		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">Thanks a lot @blimblim04 of PSXHAX for buying me a PS4!! OFFLINE EXPLOIT Released!!</marquee>'+
+						'<div>'+
+						'<table align="center" style="width:600px;margin-top:30px;">'+
 						'<tr>'+
 						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
 						'</tr>'+
@@ -93,20 +84,12 @@ function load_netcat()
 						'<a href="#" class="button" onclick="load_payload(\'kerneldumper\'); return false" style="width:43%">Kernel Dumper</a></td>'+
 						'</tr><tr><td><br/></td></tr>'+
 						'<tr>'+
-						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'enablebrowser\'); return false" style="width:43%">Enable Browser</a>&nbsp;'+
-						'<a href="#" class="button" onclick="load_payload(\'fanthreshold\'); return false" style="width:43%">Fan Threshold</a></td>'+
-						'</tr><tr><td><br/></td></tr>'+
-						'<tr>'+
-						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'ftp\'); return false" style="width:43%">FTP</a>&nbsp;'+
+						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'restore\'); return false" style="width:43%">Restore</a>&nbsp;'+
 						'<a href="#" class="button" onclick="load_payload(\'historyblocker\'); return false" style="width:43%">History Blocker</a></td>'+
 						'</tr><tr><td><br/></td></tr>'+
 						'<tr>'+
-						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'kernelclock\'); return false" style="width:43%">Kernel Clock</a>&nbsp;'+
-						'<a href="#" class="button" onclick="load_payload(\'linuxloader\'); return false" style="width:43%">Linux Loader</a></td>'+
-						'</tr><tr><td><br/></td></tr>'+
-						'<tr>'+
-						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'restore\'); return false" style="width:43%">Restore</a>&nbsp;'+
-						'<a href="#" class="button" onclick="load_payload(\'rifrenamer\'); return false" style="width:43%">RIF Renamer</a></td>'+
+						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'ftp\'); return false" style="width:90%">FTP</a>'+
+						'</td>'+
 						'</tr>'+
 						'</table>');
 	}
@@ -132,18 +115,9 @@ function load_payload(payload)
 						'  color: White;'+
 						'}'+
 						'</style>');
-		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">Thanks a lot @blimblim04 of PSXHAX !! OFFLINE EXPLOIT Released, the scripts & payloads gets automatically cached when you stay on this page !!</marquee>'+
-						'<div><table style="padding-left:30px;float: left;">'+
-						'<tr>'+
-						'<td colspan="2" align="center"><h1 style="color:red">Contributors</h1></td>'+
-						'</tr>'+
-						'<tr style="font-size:20px;"><td>blimblim04 of PSXHAX &nbsp;&nbsp;</td>'+
-						'<td>$400</td></tr><tr style="font-size:20px;"><td>Dat Tien Nguyen</td>'+
-						'<td>$10</td></tr><tr style="font-size:20px;"><td>Vigneshh1</td>'+
-						'<td>$10</td></tr><tr style="font-size:20px;"><td>Willyamy Vieira Lima</td>'+
-						'<td>$1.90</td></tr>'+
-						'</table>'+
-						'<table align="center" style="width:600px;margin-top:30px;padding-right:130px;">'+
+		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">Thanks a lot @blimblim04 of PSXHAX for buying me a PS4!! OFFLINE EXPLOIT Released!!</marquee>'+
+						'<div>'+
+						'<table align="center" style="width:600px;margin-top:30px;">'+
 						'<tr>'+
 						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
 						'</tr>'+
@@ -169,20 +143,12 @@ function load_payload(payload)
 						'<a href="#" class="button" onclick="load_payload(\'kerneldumper\'); return false" style="width:43%">Kernel Dumper</a></td>'+
 						'</tr><tr><td><br/></td></tr>'+
 						'<tr>'+
-						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'enablebrowser\'); return false" style="width:43%">Enable Browser</a>&nbsp;'+
-						'<a href="#" class="button" onclick="load_payload(\'fanthreshold\'); return false" style="width:43%">Fan Threshold</a></td>'+
-						'</tr><tr><td><br/></td></tr>'+
-						'<tr>'+
-						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'ftp\'); return false" style="width:43%">FTP</a>&nbsp;'+
+						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'restore\'); return false" style="width:43%">Restore</a>&nbsp;'+
 						'<a href="#" class="button" onclick="load_payload(\'historyblocker\'); return false" style="width:43%">History Blocker</a></td>'+
 						'</tr><tr><td><br/></td></tr>'+
 						'<tr>'+
-						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'kernelclock\'); return false" style="width:43%">Kernel Clock</a>&nbsp;'+
-						'<a href="#" class="button" onclick="load_payload(\'linuxloader\'); return false" style="width:43%">Linux Loader</a></td>'+
-						'</tr><tr><td><br/></td></tr>'+
-						'<tr>'+
-						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'restore\'); return false" style="width:43%">Restore</a>&nbsp;'+
-						'<a href="#" class="button" onclick="load_payload(\'rifrenamer\'); return false" style="width:43%">RIF Renamer</a></td>'+
+						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'ftp\'); return false" style="width:90%">FTP</a>'+
+						'</td>'+
 						'</tr>'+
 						'</table>');
 	}
