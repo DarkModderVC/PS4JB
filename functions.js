@@ -58,7 +58,7 @@ function load_netcat()
 						'</style>');
 		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">Thanks a lot @blimblim04 of PSXHAX for buying me a PS4!! OFFLINE EXPLOIT Released!!</marquee>'+
 						'<div>'+
-						'<table align="center" style="width:600px;margin-top:30px;">'+
+						'<table id="table" align="center" style="width:600px;margin-top:30px;">'+
 						'<tr>'+
 						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
 						'</tr>'+
@@ -117,7 +117,7 @@ function load_payload(payload)
 						'</style>');
 		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">Thanks a lot @blimblim04 of PSXHAX for buying me a PS4!! OFFLINE EXPLOIT Released!!</marquee>'+
 						'<div>'+
-						'<table align="center" style="width:600px;margin-top:30px;">'+
+						'<table id="table" align="center" style="width:600px;margin-top:30px;">'+
 						'<tr>'+
 						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
 						'</tr>'+
