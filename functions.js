@@ -56,7 +56,8 @@ function load_netcat()
 						'  color: White;'+
 						'}'+
 						'</style>');
-		document.write('<div>'+
+		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;"></marquee>'+
+			       			'<div>'+
 						'<table id="table" align="center" style="width:600px;margin-top:30px;">'+
 						'<tr>'+
 						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
@@ -114,7 +115,8 @@ function load_payload(payload)
 						'  color: White;'+
 						'}'+
 						'</style>');
-		document.write('<div>'+
+		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;"></marquee>'+
+			       			'<div>'+
 						'<table id="table" align="center" style="width:600px;margin-top:30px;">'+
 						'<tr>'+
 						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
