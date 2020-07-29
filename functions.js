@@ -56,8 +56,7 @@ function load_netcat()
 						'  color: White;'+
 						'}'+
 						'</style>');
-		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">Thanks a lot @blimblim04 of PSXHAX for buying me a PS4!! OFFLINE EXPLOIT Released!!</marquee>'+
-						'<div>'+
+		document.write('<div>'+
 						'<table id="table" align="center" style="width:600px;margin-top:30px;">'+
 						'<tr>'+
 						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
@@ -65,7 +64,7 @@ function load_netcat()
 						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'mirahen\'); return false" style="width:28%">MIRA + HEN</a>&nbsp;'+
 						'<a href="#" class="button" onclick="load_payload(\'miranohb\'); return false" style="width:28%">MIRA No HB</a>&nbsp;'+
-						'<a href="#" class="button" onclick="load_netcat(); return false" style="width:28%">Bin Loader</a></td>'+
+						'<a href="#" class="button" onclick="load_payload(\'miraunofficial\'); return false" style="width:28%">Mira UnOfficial</a></td>'+
 						'</tr>'+
 						'<tr><td><br/></td></tr>'+
 						'<tr>'+
@@ -73,7 +72,7 @@ function load_netcat()
 						'</tr>'+
 						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'app2usb\'); return false" style="width:43%">App2USB</a>&nbsp;'+
-						'<a href="#" class="button" onclick="load_payload(\'backup\'); return false" style="width:43%">BackUp</a></td>'+
+						'<a href="#" class="button" onclick="load_netcat(); return false" style="width:43%">Bin Loader</a></td>'+
 						'</tr><tr><td><br/></td></tr>'+
 						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'disableupdates\'); return false" style="width:43%">Disable Updates</a>&nbsp;'+
@@ -88,8 +87,8 @@ function load_netcat()
 						'<a href="#" class="button" onclick="load_payload(\'historyblocker\'); return false" style="width:43%">History Blocker</a></td>'+
 						'</tr><tr><td><br/></td></tr>'+
 						'<tr>'+
-						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'ftp\'); return false" style="width:90%">FTP</a>'+
-						'</td>'+
+						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'ftp\'); return false" style="width:43%">FTP</a>&nbsp;'+
+						'<a href="#" class="button" onclick="load_payload(\'backup\'); return false" style="width:43%">BackUp</a></td>'+
 						'</tr>'+
 						'</table>');
 	}
@@ -115,8 +114,7 @@ function load_payload(payload)
 						'  color: White;'+
 						'}'+
 						'</style>');
-		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;">Thanks a lot @blimblim04 of PSXHAX for buying me a PS4!! OFFLINE EXPLOIT Released!!</marquee>'+
-						'<div>'+
+		document.write('<div>'+
 						'<table id="table" align="center" style="width:600px;margin-top:30px;">'+
 						'<tr>'+
 						'<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>'+
@@ -124,7 +122,7 @@ function load_payload(payload)
 						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'mirahen\'); return false" style="width:28%">MIRA + HEN</a>&nbsp;'+
 						'<a href="#" class="button" onclick="load_payload(\'miranohb\'); return false" style="width:28%">MIRA No HB</a>&nbsp;'+
-						'<a href="#" class="button" onclick="load_netcat(); return false" style="width:28%">Bin Loader</a></td>'+
+						'<a href="#" class="button" onclick="load_payload(\'miraunofficial\'); return false" style="width:28%">Mira UnOfficial</a></td>'+
 						'</tr>'+
 						'<tr><td><br/></td></tr>'+
 						'<tr>'+
@@ -132,7 +130,7 @@ function load_payload(payload)
 						'</tr>'+
 						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'app2usb\'); return false" style="width:43%">App2USB</a>&nbsp;'+
-						'<a href="#" class="button" onclick="load_payload(\'backup\'); return false" style="width:43%">BackUp</a></td>'+
+						'<a href="#" class="button" onclick="load_netcat(); return false" style="width:43%">Bin Loader</a></td>'+
 						'</tr><tr><td><br/></td></tr>'+
 						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'disableupdates\'); return false" style="width:43%">Disable Updates</a>&nbsp;'+
@@ -147,8 +145,8 @@ function load_payload(payload)
 						'<a href="#" class="button" onclick="load_payload(\'historyblocker\'); return false" style="width:43%">History Blocker</a></td>'+
 						'</tr><tr><td><br/></td></tr>'+
 						'<tr>'+
-						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'ftp\'); return false" style="width:90%">FTP</a>'+
-						'</td>'+
+						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'ftp\'); return false" style="width:43%">FTP</a>&nbsp;'+
+						'<a href="#" class="button" onclick="load_payload(\'backup\'); return false" style="width:43%">BackUp</a></td>'+
 						'</tr>'+
 						'</table>');
 	}
