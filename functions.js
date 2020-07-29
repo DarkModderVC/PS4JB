@@ -56,7 +56,7 @@ function load_netcat()
 						'  color: White;'+
 						'}'+
 						'</style>');
-		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;"></marquee>'+
+		document.write('<marquee style="font-size:20px;color:red;margin-top:70px;"></marquee>'+
 			       			'<div>'+
 						'<table id="table" align="center" style="width:600px;margin-top:30px;">'+
 						'<tr>'+
@@ -115,7 +115,7 @@ function load_payload(payload)
 						'  color: White;'+
 						'}'+
 						'</style>');
-		document.write('<marquee style="font-size:20px;color:red;margin-top:120px;"></marquee>'+
+		document.write('<marquee style="font-size:20px;color:red;margin-top:70px;"></marquee>'+
 			       			'<div>'+
 						'<table id="table" align="center" style="width:600px;margin-top:30px;">'+
 						'<tr>'+
