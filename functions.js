@@ -32,7 +32,7 @@ function load_JB()
 {	
 	confirmJailbreak = confirm("Shall We Start with PS4 Jailbreak 6.72?\nNote: Click 'Cancel' if Jailbreak is already Complete after Starting your PS4!!")
 	if(confirmJailbreak){
-		document.write(JB('set1')+JB('set2')+JB('set3')+JB('set4')+JB('jb')+'<script>jb_finished();</scr'+'ipt>');
+		document.write(JB('jb')+'<script>jb_finished();</scr'+'ipt>');
 	}
 }
 
