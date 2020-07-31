@@ -4,7 +4,10 @@ CACHE MANIFEST
 index.html
 common/functions.js
 common/exploit.js
-common/common.js
+common/helpers.js
+common/malloc.js
+common/rop.js
+common/syscalls.js
 jb/jb.js
 payloads/mira.js
 payloads/mirahen.js
