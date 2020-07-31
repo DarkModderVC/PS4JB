@@ -18,24 +18,16 @@
   background-color: #007bff;
   color: White;
 }
-</style>
+</style></head>
 <body>
-<script>window.applicationCache.ondownloading=function(){alert("Page Caching started !!")};window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML="<h3 style='color:green'>Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed</h3>"};window.applicationCache.oncached=function(){alert("Page Cached Successfully!!")};</script>
-<script src="functions.js"></script>
+<script src="common/functions.js"></script>
 <script>function print(){}</script>
 <script src="common/exploit.js"></script>
-<script src="common/helpers.js"></script>
-<script src="common/malloc.js"></script>
-<script src="common/rop.js"></script>
-<script src="common/syscalls.js"></script>
-<script src="common/syscalls2.js"></script>
-<marquee style="font-size:20px;color:red;margin-top:70px;"></marquee>
-<div id="progress"></div>
+<script src="common/common.js"></script>
+<script>var progress;window.applicationCache.ondownloading=function(){progress=document.getElementById("progress");progress.innerHTML="Page Caching Started!!"};window.applicationCache.onprogress=function(a){progress.innerHTML="Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed"};window.applicationCache.oncached=function(){progress.innerHTML="Page Cached Successfully!!";setTimeout(function(){progress.innerHTML="PS4 Jailbreak 6.72 Exploit Complete ✔"; }, 4000);};</script>
+<h1 id="progress" style="margin-top:30px;text-align:center;">PS4 Jailbreak 6.72 Exploit Complete ✔</h1><hr>
 <div>
 <table align="center" style="width:600px;margin-top:30px;">
-<tr>
-<td colspan="2" align="center"><h1>PS4 Jailbreak 6.72</h1></td>
-</tr>
 <tr>
 <td align="center" colspan="2"><a href="#" class="button" onclick="load_payload('mirahen'); return false" style="width:28%">MIRA + HEN</a>
 <a href="#" class="button" onclick="load_payload('miranohb'); return false" style="width:28%">MIRA No HB</a>
