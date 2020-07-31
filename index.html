@@ -20,15 +20,14 @@
 }
 </style></head>
 <body>
+<script>
+  window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!"};
+  window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML="Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed"};
+  window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72"; }, 4000);};
+</script>
 <script src="common/functions.js"></script>
 <script>function print(){}</script>
 <script src="common/exploit.js"></script>
-<script src="common/helpers.js"></script>
-<script src="common/malloc.js"></script>
-<script src="common/rop.js"></script>
-<script src="common/syscalls.js"></script>
-<script src="common/syscalls2.js"></script>
-<script>var progress;window.applicationCache.ondownloading=function(){progress=document.getElementById("progress");progress.innerHTML="Page Caching Started!!"};window.applicationCache.onprogress=function(a){progress.innerHTML="Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed"};window.applicationCache.oncached=function(){progress.innerHTML="Page Cached Successfully!!";setTimeout(function(){progress.innerHTML="PS4 Jailbreak 6.72"; }, 4000);};</script>
 <h1 id="progress" style="margin-top:30px;text-align:center;">PS4 Jailbreak 6.72 Exploit Complete ✔</h1><hr>
 <div>
 <table align="center" style="width:600px;margin-top:30px;">
