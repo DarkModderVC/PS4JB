@@ -11,6 +11,7 @@ function jb_finished()
 function payload_finished()
 {
     setTimeout(function(){document.getElementById("progress").innerHTML="Load Successful!!"; }, 3000);
+	setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 Payload Loaded Succesfully ✔"; }, 5000);
 }
 
 function SC(x)
@@ -31,7 +32,9 @@ function PAYLOAD(x)
 function load_JB()
 {	var isDone=getCookie("isDone");
 	if (isDone == "") {
-		document.write(JB('jb')+'<script>jb_finished();</scr'+'ipt>');
+		if(confirm("Shall We Start with PS4 Jailbreak 6.72?\nNote: Click 'Cancel' if Jailbreak is already Complete after Starting your PS4!!")){
+			document.write(JB('jb')+'<script>jb_finished();</scr'+'ipt>');
+		}
 	}
 }
 
