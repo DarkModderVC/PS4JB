@@ -32,9 +32,7 @@ function PAYLOAD(x)
 function load_JB()
 {	var isDone=getCookie("isDone");
 	if (isDone == "") {
-		if(confirm("Shall We Start with PS4 Jailbreak 6.72?\nNote: Click 'Cancel' if Jailbreak is already Complete after Starting your PS4!!")){
-			document.write(JB('jb')+'<script>jb_finished();</scr'+'ipt>');
-		}
+		document.write(JB('jb')+'<script>jb_finished();</scr'+'ipt>');
 	}
 }
 
@@ -169,3 +167,7 @@ function getCookie(cname) {
   }
   return "";
 }
+
+window.addEventListener('beforeunload', function (e) {
+    read_ptr_at(0);
+});
