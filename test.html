@@ -20,7 +20,7 @@
 }
 </style>
 <body>
-<script>var progress=document.getElementById("progress");window.applicationCache.ondownloading=function(){progress.innerHTML="<h1>Page Caching Started!!</h1>"};window.applicationCache.onprogress=function(a){progress.innerHTML="<h1>Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed</h1>"};window.applicationCache.oncached=function(){progress.innerHTML="<h1>Page Cached Successfully!!</h1>"};</script>
+<script>var progress;window.applicationCache.ondownloading=function(){progress=document.getElementById("progress");progress.innerHTML="<h1>Page Caching Started!!</h1>"};window.applicationCache.onprogress=function(a){progress.innerHTML="<h1>Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed</h1>"};window.applicationCache.oncached=function(){progress.innerHTML="<h1>Page Cached Successfully!!</h1>"};</script>
 <script src="functions.js"></script>
 <script>function print(){}</script>
 <script src="common/exploit.js"></script>
