@@ -8,6 +8,10 @@ index.html
 # scripts
 common/functions.js
 common/exploit.js
+jb/set1.js
+jb/set2.js
+jb/set3.js
+jb/set4.js
 jb/jb.js
 payloads/mira.js
 payloads/mirahen.js
