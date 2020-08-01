@@ -21,19 +21,19 @@ function SC(x)
 
 function JB(x)
 {
-    return SC('jb/'+x);
+    return SC('../jb/'+x);
 }
 
 function PAYLOAD(x)
 {
-    return SC('payloads/'+x);
+    return SC('../payloads/'+x);
 }
 
 function load_JB()
 {	var isDone=getCookie("isDone");
 	if (isDone == "") {
-		if(confirm("Shall We Start with PS4 Jailbreak 6.72?\nNote: Click 'Cancel' if Jailbreak is already Complete after Starting your PS4!!")){			document.write(JB('jb')+'<script>jb_finished();</scr'+'ipt>');
-			document.write(JB('jb')+'<script>jb_finished();</scr'+'ipt>');	
+		if(confirm("Shall We Start with PS4 Jailbreak 6.72?\nNote: Click 'Cancel' if Jailbreak is already Complete after Starting your PS4!!")){
+			document.write(JB('set1')+JB('set2')+JB('set3')+JB('set4')+JB('jb')+'<script>jb_finished();</scr'+'ipt>');	
 		}
 	}
 }
