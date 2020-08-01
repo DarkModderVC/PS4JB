@@ -25,7 +25,7 @@ function JB(x)
 
 function PAYLOAD(x)
 {
-    return SC('/../payloads/'+x);
+    return SC('../payloads/'+x);
 }
 
 function load_JB()
