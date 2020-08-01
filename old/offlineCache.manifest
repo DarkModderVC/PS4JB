@@ -7,22 +7,22 @@ index.html
  
 # scripts
 functions.js
-/../common/exploit.js
+../common/exploit.js
 c-code.js
-/../payloads/mira.js
-/../payloads/mirahen.js
-/../payloads/miranohb.js
-/../payloads/miraunofficial.js
-/../payloads/c-code.js
-/../payloads/app2usb.js
-/../payloads/backup.js
-/../payloads/disableupdates.js
-/../payloads/dumper.js
-/../payloads/enableupdates.js
-/../payloads/ftp.js
-/../payloads/historyblocker.js
-/../payloads/kerneldumper.js
-/../payloads/restore.js
+../payloads/mira.js
+../payloads/mirahen.js
+../payloads/miranohb.js
+../payloads/miraunofficial.js
+../payloads/c-code.js
+../payloads/app2usb.js
+../payloads/backup.js
+../payloads/disableupdates.js
+../payloads/dumper.js
+../payloads/enableupdates.js
+../payloads/ftp.js
+../payloads/historyblocker.js
+../payloads/kerneldumper.js
+../payloads/restore.js
  
 NETWORK:
 *
