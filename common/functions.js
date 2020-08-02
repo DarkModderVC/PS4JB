@@ -3,9 +3,9 @@ function jb_finished()
     if(main_ret == 179 || main_ret == 0){
 		setCookie("JB","DONE",30);
 		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 Exploit Complete ✔"; }, 500);
-	}else{
-        setTimeout(function(){document.getElementById("progress").innerHTML="Jailbreak failed! Reboot your PS4 and try again &#10006;"; }, 500);
-	}
+    } else{
+        	setTimeout(function(){document.getElementById("progress").innerHTML="Jailbreak failed! Reboot your PS4 and try again!!"; }, 500);
+    }
 }
 
 function payload_finished()
