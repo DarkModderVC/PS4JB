@@ -21,9 +21,9 @@
 </style>
 <body>
 <script>window.applicationCache.ondownloading=function(){alert("Page Caching started !!")};window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML="<h3 style='color:green'>Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed</h3>"};window.applicationCache.oncached=function(){alert("Page Cached Successfully!!")};</script>
-<script src="functions.js"></script>
+<script src="common/functions.js"></script>
 <script>function print(){}</script>
-<script src="../common/exploit.js"></script>
+<script src="common/exploit.js"></script>
 <marquee style="font-size:20px;color:red;margin-top:70px;"></marquee>
 <div id="progress"></div>
 <div>
