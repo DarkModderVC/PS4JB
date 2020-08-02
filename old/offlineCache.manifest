@@ -7,7 +7,7 @@ index.html
  
 # scripts
 functions.js
-../common/exploit.js
+exploit.js
 c-code.js
 ../payloads/mira.js
 ../payloads/mirahen.js
