@@ -6,8 +6,8 @@ CACHE:
 index.html
  
 # scripts
-functions.js
-../common/exploit.js
+common/functions.js
+common/exploit.js
 jb/set1.js
 jb/set2.js
 jb/set3.js
