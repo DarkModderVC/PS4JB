@@ -91,6 +91,10 @@ function exploit(){
 						'<a href="#" class="button" onclick="load_payload(\'backup\'); return false" style="width:43%">BackUp</a></td>'+
 						'</tr><tr><td><br/></td></tr>'+
 						'<tr>'+
+						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'todex\'); return false" style="width:43%">To-DEX</a>&nbsp;'+
+						'<a href="#" class="button" onclick="load_payload(\'webrte\'); return false" style="width:43%">WebRTE</a></td>'+
+						'</tr><tr><td><br/></td></tr>'+
+						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'linuxloader\'); return false" style="width:90%">Linux Loader</a></td>'+
 						'</tr>'+
 						'</table></div>');
@@ -150,6 +154,10 @@ function load_netcat()
 						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'ftp\'); return false" style="width:43%">FTP</a>&nbsp;'+
 						'<a href="#" class="button" onclick="load_payload(\'backup\'); return false" style="width:43%">BackUp</a></td>'+
+						'</tr><tr><td><br/></td></tr>'+
+						'<tr>'+
+						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'todex\'); return false" style="width:43%">To-DEX</a>&nbsp;'+
+						'<a href="#" class="button" onclick="load_payload(\'webrte\'); return false" style="width:43%">WebRTE</a></td>'+
 						'</tr><tr><td><br/></td></tr>'+
 						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'linuxloader\'); return false" style="width:90%">Linux Loader</a></td>'+
@@ -212,6 +220,10 @@ function load_payload(payload)
 						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'ftp\'); return false" style="width:43%">FTP</a>&nbsp;'+
 						'<a href="#" class="button" onclick="load_payload(\'backup\'); return false" style="width:43%">BackUp</a></td>'+
+						'</tr><tr><td><br/></td></tr>'+
+						'<tr>'+
+						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'todex\'); return false" style="width:43%">To-DEX</a>&nbsp;'+
+						'<a href="#" class="button" onclick="load_payload(\'webrte\'); return false" style="width:43%">WebRTE</a></td>'+
 						'</tr><tr><td><br/></td></tr>'+
 						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'linuxloader\'); return false" style="width:90%">Linux Loader</a></td>'+
