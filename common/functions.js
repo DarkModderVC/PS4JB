@@ -84,7 +84,10 @@ function exploit(){
 						'</tr><tr><td><br/></td></tr>'+
 						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'restore\'); return false" style="width:43%">Restore</a>&nbsp;'+
-						'<a href="#" class="button" onclick="load_payload(\'historyblocker\'); return false" style="width:43%">History Blocker</a></td>'+
+						'<a href="#" class="button" onclick="load_payload(\'fanthreshold\'); return false" style="width:43%;border-radius: 5px 0px 0px 5px;">Set Fan Threshold</a>'+
+						'<select id="temp" style="height:37px;border-radius: 0px 5px 5px 0px;position: absolute;" class="button">'+
+						'<option value="40">40°C</option><option value="41">41°C</option><option value="42">42°C</option><option value="43">43°C</option><option value="44">44°C</option><option value="45">45°C</option><option value="46">46°C</option><option value="47">47°C</option><option value="48">48°C</option><option value="49">49°C</option><option value="50">50°C</option><option value="51">51°C</option><option value="52">52°C</option><option value="53">53°C</option><option value="54">54°C</option><option value="55">55°C</option><option value="56">56°C</option><option value="57">57°C</option><option value="58">58°C</option><option value="59">59°C</option><option value="60">60°C</option><option value="61">61°C</option><option value="62">62°C</option><option value="63">63°C</option><option value="64">64°C</option><option value="65">65°C</option><option value="66">66°C</option><option value="67">67°C</option><option value="68">68°C</option><option value="69">69°C</option><option value="70" selected>70°C</option><option value="71">71°C</option><option value="72">72°C</option><option value="73">73°C</option><option value="74">74°C</option><option value="75">75°C</option><option value="76">76°C</option><option value="77">77°C</option><option value="78">78°C</option><option value="79">79°C</option>'+
+						'</select></td>'+
 						'</tr><tr><td><br/></td></tr>'+
 						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'ftp\'); return false" style="width:43%">FTP</a>&nbsp;'+
@@ -149,7 +152,10 @@ function load_netcat()
 						'</tr><tr><td><br/></td></tr>'+
 						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'restore\'); return false" style="width:43%">Restore</a>&nbsp;'+
-						'<a href="#" class="button" onclick="load_payload(\'historyblocker\'); return false" style="width:43%">History Blocker</a></td>'+
+						'<a href="#" class="button" onclick="load_payload(\'fanthreshold\'); return false" style="width:43%;border-radius: 5px 0px 0px 5px;">Set Fan Threshold</a>'+
+						'<select id="temp" style="height:37px;border-radius: 0px 5px 5px 0px;position: absolute;" class="button">'+
+						'<option value="40">40°C</option><option value="41">41°C</option><option value="42">42°C</option><option value="43">43°C</option><option value="44">44°C</option><option value="45">45°C</option><option value="46">46°C</option><option value="47">47°C</option><option value="48">48°C</option><option value="49">49°C</option><option value="50">50°C</option><option value="51">51°C</option><option value="52">52°C</option><option value="53">53°C</option><option value="54">54°C</option><option value="55">55°C</option><option value="56">56°C</option><option value="57">57°C</option><option value="58">58°C</option><option value="59">59°C</option><option value="60">60°C</option><option value="61">61°C</option><option value="62">62°C</option><option value="63">63°C</option><option value="64">64°C</option><option value="65">65°C</option><option value="66">66°C</option><option value="67">67°C</option><option value="68">68°C</option><option value="69">69°C</option><option value="70" selected>70°C</option><option value="71">71°C</option><option value="72">72°C</option><option value="73">73°C</option><option value="74">74°C</option><option value="75">75°C</option><option value="76">76°C</option><option value="77">77°C</option><option value="78">78°C</option><option value="79">79°C</option>'+
+						'</select></td>'+
 						'</tr><tr><td><br/></td></tr>'+
 						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'ftp\'); return false" style="width:43%">FTP</a>&nbsp;'+
@@ -172,7 +178,9 @@ function load_netcat()
 
 function load_payload(payload)
 {	
-    if(document.getElementById('table') == null){
+	if(payload=="fanthreshold")
+		var fanTemp=document.getElementById('temp').value;
+	if(document.getElementById('table') == null){
 		document.write('<style>'+
 						'.button {'+
 						'  background-color: #003263;'+
@@ -215,7 +223,10 @@ function load_payload(payload)
 						'</tr><tr><td><br/></td></tr>'+
 						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'restore\'); return false" style="width:43%">Restore</a>&nbsp;'+
-						'<a href="#" class="button" onclick="load_payload(\'historyblocker\'); return false" style="width:43%">History Blocker</a></td>'+
+						'<a href="#" class="button" onclick="load_payload(\'fanthreshold\'); return false" style="width:43%;border-radius: 5px 0px 0px 5px;">Set Fan Threshold</a>'+
+						'<select id="temp" style="height:37px;border-radius: 0px 5px 5px 0px;position: absolute;" class="button">'+
+						'<option value="40">40°C</option><option value="41">41°C</option><option value="42">42°C</option><option value="43">43°C</option><option value="44">44°C</option><option value="45">45°C</option><option value="46">46°C</option><option value="47">47°C</option><option value="48">48°C</option><option value="49">49°C</option><option value="50">50°C</option><option value="51">51°C</option><option value="52">52°C</option><option value="53">53°C</option><option value="54">54°C</option><option value="55">55°C</option><option value="56">56°C</option><option value="57">57°C</option><option value="58">58°C</option><option value="59">59°C</option><option value="60">60°C</option><option value="61">61°C</option><option value="62">62°C</option><option value="63">63°C</option><option value="64">64°C</option><option value="65">65°C</option><option value="66">66°C</option><option value="67">67°C</option><option value="68">68°C</option><option value="69">69°C</option><option value="70" selected>70°C</option><option value="71">71°C</option><option value="72">72°C</option><option value="73">73°C</option><option value="74">74°C</option><option value="75">75°C</option><option value="76">76°C</option><option value="77">77°C</option><option value="78">78°C</option><option value="79">79°C</option>'+
+						'</select></td>'+
 						'</tr><tr><td><br/></td></tr>'+
 						'<tr>'+
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'ftp\'); return false" style="width:43%">FTP</a>&nbsp;'+
@@ -229,6 +240,8 @@ function load_payload(payload)
 						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'linuxloader\'); return false" style="width:90%">Linux Loader</a></td>'+
 						'</tr>'+
 						'</table></div>');
+		if(payload=="fanthreshold")
+			document.getElementById('temp').value=fanTemp;
 	}else{
 		document.write('<script>document.getElementById("progress").innerHTML="Loading! Please Wait!!";</scr'+'ipt>');
 	}
