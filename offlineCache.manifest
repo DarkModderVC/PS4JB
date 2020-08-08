@@ -16,10 +16,10 @@ payloads/disableupdates.js
 payloads/dumper.js
 payloads/enableupdates.js
 payloads/ftp.js
-payloads/historyblocker.js
 payloads/kerneldumper.js
 payloads/restore.js
 payloads/linuxloader.js
 payloads/todex.js
 payloads/webrte.js
 payloads/hen.js
+payloads/fanthreshold.js
