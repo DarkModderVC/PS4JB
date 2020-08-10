@@ -104,7 +104,7 @@ function exploit(){
 	}else{
 		document.write('<script>document.getElementById("progress").innerHTML="Running Jailbreak Exploit!!";</scr'+'ipt>');
 	}
-	setTimeout(function(){document.write(JB('jb'));}, 500);
+	setTimeout(function(){document.write(JB('jb')+'<script defer>jb_finished();</scr'+'ipt>');}, 500);
 }
 
 function load_netcat()
