@@ -62,7 +62,7 @@ function exploit(){
 			       		'<div>'+
 						'<table id="table" align="center" style="width:600px;margin-top:30px;">'+
 						'<tr>'+
-						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'mirahen\'); return false" style="width:28%">MIRA</a>&nbsp;'+
+						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'miranohb\'); return false" style="width:28%">MIRA No HB</a>&nbsp;'+
 						'<a href="#" class="button" onclick="load_payload(\'hen\'); return false" style="width:28%">HEN</a>&nbsp;'+
 						'<a href="#" class="button" onclick="load_payload(\'miraunofficial\'); return false" style="width:28%">Mira UnOfficial</a></td>'+
 						'</tr>'+
@@ -130,7 +130,7 @@ function load_netcat()
 			       		'<div>'+
 						'<table id="table" align="center" style="width:600px;margin-top:30px;">'+
 						'<tr>'+
-						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'mirahen\'); return false" style="width:28%">MIRA</a>&nbsp;'+
+						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'miranohb\'); return false" style="width:28%">MIRA No HB</a>&nbsp;'+
 						'<a href="#" class="button" onclick="load_payload(\'hen\'); return false" style="width:28%">HEN</a>&nbsp;'+
 						'<a href="#" class="button" onclick="load_payload(\'miraunofficial\'); return false" style="width:28%">Mira UnOfficial</a></td>'+
 						'</tr>'+
@@ -201,7 +201,7 @@ function load_payload(payload)
 			       		'<div>'+
 						'<table id="table" align="center" style="width:600px;margin-top:30px;">'+
 						'<tr>'+
-						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'mirahen\'); return false" style="width:28%">MIRA</a>&nbsp;'+
+						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'miranohb\'); return false" style="width:28%">MIRA No HB</a>&nbsp;'+
 						'<a href="#" class="button" onclick="load_payload(\'hen\'); return false" style="width:28%">HEN</a>&nbsp;'+
 						'<a href="#" class="button" onclick="load_payload(\'miraunofficial\'); return false" style="width:28%">Mira UnOfficial</a></td>'+
 						'</tr>'+
