@@ -6,7 +6,6 @@ common/functions.js
 common/exploit.js
 jb/jb.js
 payloads/mira.js
-payloads/mirahen.js
 payloads/miranohb.js
 payloads/miraunofficial.js
 payloads/c-code.js
