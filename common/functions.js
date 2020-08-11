@@ -98,7 +98,8 @@ function exploit(){
 						'<a href="#" class="button" onclick="load_payload(\'webrte\'); return false" style="width:43%">WebRTE</a></td>'+
 						'</tr><tr><td><br/></td></tr>'+
 						'<tr>'+
-						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'linuxloader\'); return false" style="width:90%">Linux Loader</a></td>'+
+						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'linuxloader\'); return false" style="width:43%">Linux Loader</a>&nbsp'+
+			       			'<a href="#" class="button" onclick="load_payload(\'ps4debug\'); return false" style="width:43%">PS4 Debug</a></td>'+
 						'</tr>'+
 						'</table></div>');
 	}else{
@@ -166,7 +167,8 @@ function load_netcat()
 						'<a href="#" class="button" onclick="load_payload(\'webrte\'); return false" style="width:43%">WebRTE</a></td>'+
 						'</tr><tr><td><br/></td></tr>'+
 						'<tr>'+
-						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'linuxloader\'); return false" style="width:90%">Linux Loader</a></td>'+
+						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'linuxloader\'); return false" style="width:43%">Linux Loader</a>&nbsp'+
+			       			'<a href="#" class="button" onclick="load_payload(\'ps4debug\'); return false" style="width:43%">PS4 Debug</a></td>'+
 						'</tr>'+
 						'</table></div>');
 	}else{
@@ -237,7 +239,8 @@ function load_payload(payload)
 						'<a href="#" class="button" onclick="load_payload(\'webrte\'); return false" style="width:43%">WebRTE</a></td>'+
 						'</tr><tr><td><br/></td></tr>'+
 						'<tr>'+
-						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'linuxloader\'); return false" style="width:90%">Linux Loader</a></td>'+
+						'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'linuxloader\'); return false" style="width:43%">Linux Loader</a>&nbsp'+
+			       			'<a href="#" class="button" onclick="load_payload(\'ps4debug\'); return false" style="width:43%">PS4 Debug</a></td>'+
 						'</tr>'+
 						'</table></div>');
 		if(payload=="fanthreshold")
