@@ -1,7 +1,7 @@
 function payload_finished(payload)
 {
 	setCookie("JB","DONE",1);
-	setTimeout(function(){document.getElementById("progress").innerHTML="Load Successful!!"; }, 3000);
+	setTimeout(function(){document.getElementById("progress").innerHTML="Load Successful!!";}, 3000);
 	if(payload == "binloader"){
 		setTimeout(function(){document.getElementById("progress").innerHTML="Awaiting Payload!! Send Payload To Port 9021"; }, 7000);
 	} else{
@@ -10,6 +10,7 @@ function payload_finished(payload)
 }
 
 function triggerFunction(payload){
+	preloader();
 	if(payload == "app2usb"){
 		app2usb();
 	}else if(payload == "backup"){

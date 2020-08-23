@@ -1,6 +1,6 @@
 # PS4JB
 
-This is an Offline full chain exploit for PS4 firmware 6.72.
+This is an Offline full chain exploit for PS4 firmware 6.72 with 100% Success Rate.
 
 ## Steps
 
@@ -10,7 +10,7 @@ This is an Offline full chain exploit for PS4 firmware 6.72.
 * Run HEN/MIRA after Jailbreak is complete
 * Once Payload loaded successfully, Open the Game
 
-Note: If you face frequent crashes, Unplug your PS4, Click power button few times and then connect it back and Power on.
+Note: If you face crashes, Unplug your PS4, Click power button few times and then connect it back and Power on.
 
 ## YouTube Channel
 
