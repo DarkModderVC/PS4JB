@@ -39,7 +39,6 @@ write_mem(ropchain+1592456, [114, 120, 61, 48, 120, 37, 108, 108, 120, 32, 114, 
 write_mem(ropchain+1592480, [112, 97, 103, 101, 95, 114, 120, 91, 48, 93, 32, 61, 32, 48, 120, 37, 120, 10, 0, 0, 0, 0, 0, 0]);
 write_mem(ropchain+1592504, [99, 108, 111, 115, 101, 100, 32, 102, 100, 32, 37, 100, 10, 0, 0, 0]);
 write_mem(ropchain+1592520, [232, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
-if(ropchain_ptr==1591992){
 pivot(ropchain);
 var main_ret = read_ptr_at(main_ret);
 var printf_buf_end = read_ptr_at(ropchain+printf_buf_offset);
@@ -52,5 +51,5 @@ if(main_ret == 179 || main_ret == 0){
 	setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 Exploit Complete ✔";}, 500);
 } else{
 	alert("Jailbreak Failed!! Please Restart and Start Fresh!!!");
-}}else{alert("Write Incomplete.. Please Close & Re-Open the browser to Try Again !!");}
+}
 }
