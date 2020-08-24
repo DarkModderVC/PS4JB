@@ -1,0 +1,81 @@
+<html manifest="offlineCache.manifest">
+<head>
+<title>PS4 Jailbreak 6.72</title>
+<meta charset="utf-8"/>
+<style>
+.button {
+  background-color: #003263;  
+  border-radius: 5px;
+  color: white;
+  padding: .5em;
+  text-decoration: none;
+  height:100%;
+  display:inline-table;
+}
+
+.button:focus,
+.button:hover {
+  background-color: #007bff;
+  color: White;
+}
+</style></head>
+<body>
+<script>
+  window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!"};
+  window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML="Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed"};
+  window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";setTimeout(function(){document.getElementById("progress").innerHTML="Turn Off the Internet & Reopen the Page to Run the Exploit!!"; }, 1500);};
+  window.applicationCache.onnoupdate=function(){setTimeout(function(){load_JB(); }, 1500);};
+  window.applicationCache.onerror=function(){setTimeout(function(){load_JB(); }, 1500);};
+</script>
+<script src="common/functions.js"></script>
+<script>function print(){}</script>
+<script src="common/exploit.js"></script>
+<h1 id="progress" style="margin-top:30px;text-align:center;">PS4 Jailbreak 6.72</h1><hr>
+<div>
+<table align="center" style="width:600px;margin-top:30px;">
+<tr>
+<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload('miranohb'); return false" style="width:28%">MIRA No HB</a>
+<a href="#" class="button" onclick="load_payload('hen'); return false" style="width:28%">HEN</a>
+<a href="#" class="button" onclick="load_payload('miraunofficial'); return false" style="width:28%">MIRA UnOfficial</a></td>
+</tr>
+<tr><td><br/></td></tr>
+<tr>
+<td colspan="2" align="center"><h1>Payloads</h1></td>
+</tr>
+<tr>
+<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload('app2usb'); return false" style="width:43%">App2USB</a>
+<a href="#" class="button" onclick="load_netcat(); return false" style="width:43%">Bin Loader</a></td>
+</tr><tr><td><br/></td></tr>
+<tr>
+<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload('disableupdates'); return false" style="width:43%">Disable Updates</a>
+<a href="#" class="button" onclick="load_payload('enableupdates'); return false" style="width:43%">Enable Updates</a></td>
+</tr><tr><td><br/></td></tr>
+<tr>
+<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload('dumper'); return false" style="width:43%">Dumper</a>
+<a href="#" class="button" onclick="load_payload('kerneldumper'); return false" style="width:43%">Kernel Dumper</a></td>
+</tr><tr><td><br/></td></tr>
+<tr>
+<tr>
+<td align="center" colspan="2">
+<a href="#" class="button" onclick="load_payload('restore'); return false" style="width:43%">Restore</a>
+<a href="#" class="button" onclick="load_payload('fanthreshold'); return false" style="width:43%;border-radius: 5px 0px 0px 5px;">Set Fan Threshold</a>
+<select id="temp" style="height:42px;border-radius: 0px 5px 5px 0px;position: absolute;" class="button">
+<option value="40">40°C</option><option value="41">41°C</option><option value="42">42°C</option><option value="43">43°C</option><option value="44">44°C</option><option value="45">45°C</option><option value="46">46°C</option><option value="47">47°C</option><option value="48">48°C</option><option value="49">49°C</option><option value="50">50°C</option><option value="51">51°C</option><option value="52">52°C</option><option value="53">53°C</option><option value="54">54°C</option><option value="55">55°C</option><option value="56">56°C</option><option value="57">57°C</option><option value="58">58°C</option><option value="59">59°C</option><option value="60">60°C</option><option value="61">61°C</option><option value="62">62°C</option><option value="63">63°C</option><option value="64">64°C</option><option value="65">65°C</option><option value="66">66°C</option><option value="67">67°C</option><option value="68">68°C</option><option value="69">69°C</option><option value="70" selected>70°C</option><option value="71">71°C</option><option value="72">72°C</option><option value="73">73°C</option><option value="74">74°C</option><option value="75">75°C</option><option value="76">76°C</option><option value="77">77°C</option><option value="78">78°C</option><option value="79">79°C</option>
+</select>
+</td>
+</tr><tr><td><br/></td></tr>
+<tr>
+<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload('ftp'); return false" style="width:43%">FTP</a>
+<a href="#" class="button" onclick="load_payload('backup'); return false" style="width:43%">BackUp</a></td>
+</tr><tr><td><br/></td></tr>
+<tr>
+<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload('todex'); return false" style="width:43%">To-DEX</a>
+<a href="#" class="button" onclick="load_payload('webrte'); return false" style="width:43%">WebRTE</a></td>
+</tr><tr><td><br/></td></tr>
+<tr>
+<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload('linuxloader'); return false" style="width:43%">Linux Loader</a>
+<a href="#" class="button" onclick="load_payload('ps4debug'); return false" style="width:43%">PS4 Debug</a></td>
+</tr>
+</table></div>
+</body>
+</html>
