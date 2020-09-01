@@ -1,6 +1,5 @@
 function payload_finished(payload)
 {
-	setCookie("JB","DONE",1);
 	setTimeout(function(){document.getElementById("progress").innerHTML="Load Successful!!";}, 3000);
 	if(payload == "binloader"){
 		setTimeout(function(){document.getElementById("progress").innerHTML="Awaiting Payload!! Send Payload To Port 9021"; }, 7000);
@@ -59,13 +58,20 @@ function triggerFunction(payload){
 }
 
 function load_JB()
-{	var jbDone=getCookie("JB");
-	var spoofed=navigator.userAgent.indexOf("6.72")>=0 ? false : true;
-	if (!spoofed && (jbDone == "" || jbDone == "START")){
-		setCookie("JB","START",1);
+{	var spoofed=navigator.userAgent.indexOf("6.72")>=0 ? false : true;
+	if (!spoofed){
 		exploit();	
 	}else{
-		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 Exploit Complete ✔"; }, 500);
+		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 Exploit Complete ✔";document.getElementById("jailbreak").style.display="block";document.getElementById("exploit").style.display="none"; }, 500);
+	}
+}
+
+function load_OLDJB()
+{	var spoofed=navigator.userAgent.indexOf("6.72")>=0 ? false : true;
+	if (!spoofed){
+		oldexploit();	
+	}else{
+		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 Exploit Complete ✔";document.getElementById("jailbreak").style.display="block";document.getElementById("exploit").style.display="none"; }, 500);
 	}
 }
 
@@ -74,36 +80,13 @@ function exploit(){
 	setTimeout(function(){jb();}, 500);
 }
 
+function oldexploit(){
+	document.getElementById("progress").innerHTML="Running Jailbreak Exploit!!";
+	setTimeout(function(){oldjb();}, 500);
+}
+
 function load_payload(payload)
 {	
 	document.getElementById("progress").innerHTML="Loading! Please Wait!!";
-	setCookie("JB","START",1);
 	setTimeout(function(){triggerFunction(payload)}, 500);
-}
-
-function getCookie(name) {
-  var name = name + "=";
-  var decodedCookie = decodeURIComponent(document.cookie);
-  var ca = decodedCookie.split(';');
-  for(var i = 0; i < ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-
-function setCookie(name, value, mins) {
-  var d = new Date();
-  d.setTime(d.getTime() + (mins*60*1000));
-  var expires = "expires="+ d.toUTCString();
-  document.cookie = name + "=" + value + ";" + expires + ";path=/";
-}
-
-function deleteCookie(name) {
-  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 }

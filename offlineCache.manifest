@@ -5,6 +5,7 @@ index.html
 common/functions.js
 common/exploit.js
 jb/jb.js
+jb/oldjb.js
 payloads/mirahen.js
 payloads/miranohb.js
 payloads/miraunofficial.js

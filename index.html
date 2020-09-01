@@ -24,13 +24,12 @@
   window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!"};
   window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML="Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed"};
   window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";setTimeout(function(){document.getElementById("progress").innerHTML="Turn Off the Internet & Reopen the Page to Run the Exploit!!"; }, 1500);};
-  window.applicationCache.onnoupdate=function(){setTimeout(function(){load_JB(); }, 1500);};
-  window.applicationCache.onerror=function(){setTimeout(function(){load_JB(); }, 1500);};
 </script>
 <script src="common/functions.js"></script>
 <script>function print(){}</script>
 <script src="common/exploit.js"></script>
 <script src="jb/jb.js"></script>
+<script src="jb/oldjb.js"></script>
 <script src="payloads/app2usb.js"></script>
 <script src="payloads/backup.js"></script>
 <script src="payloads/preloader.js"></script>
@@ -54,7 +53,10 @@
 <div>
 <table align="center" style="width:600px;margin-top:30px;">
 <tr>
-<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload('miranohb'); return false" style="width:28%">MIRA No HB</a>
+<td align="center" id="exploit" colspan="2"><a href="#" class="button" onclick="load_OLDJB(); return false" style="width:28%">Old Exploit</a>
+<a href="#" class="button" onclick="load_JB(); return false" style="width:28%">New Exploit</a>
+</td>
+<td align="center" id="jailbreak" colspan="2" style="display:none"><a href="#" class="button" onclick="load_payload('miranohb'); return false" style="width:28%">MIRA No HB</a>
 <a href="#" class="button" onclick="load_payload('hen'); return false" style="width:28%">HEN</a>
 <a href="#" class="button" onclick="load_payload('miraunofficial'); return false" style="width:28%">MIRA UnOfficial</a>
 </td>
