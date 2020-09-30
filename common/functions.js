@@ -4,7 +4,12 @@ function payload_finished(payload)
 	if(payload == "binloader"){
 		setTimeout(function(){document.getElementById("progress").innerHTML="Awaiting Payload!! Send Payload To Port 9021"; }, 7000);
 	} else{
-		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 Payload Loaded Succesfully ✔"; }, 7000);
+		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 Payload Loaded Succesfully !!"; }, 7000);
+	}
+	if(payload == "hen" || payload == "mirahen" || payload == "miranohb" || payload == "miraunofficial"){
+		localStorage.Fail--;
+		localStorage.Success++;
+		document.getElementById("success").innerHTML="Success: "+localStorage.Success;
 	}
 }
 
@@ -27,6 +32,7 @@ function triggerFunction(payload){
 	}else if(payload == "ftp"){
 		ftp();
 	}else if(payload == "hen"){
+		localStorage.Fail++;
 		hen();
 	}else if(payload == "historyblocker"){
 		historyblocker();
@@ -37,10 +43,13 @@ function triggerFunction(payload){
 	}else if(payload == "linuxloader"){
 		linuxloader();
 	}else if(payload == "mirahen"){
+		localStorage.Fail++;
 		mirahen();
 	}else if(payload == "miranohb"){
+		localStorage.Fail++;
 		miranohb();
 	}else if(payload == "miraunofficial"){
+		localStorage.Fail++;
 		miraunofficial();
 	}else if(payload == "ps4debug"){
 		ps4debug();
@@ -60,9 +69,9 @@ function triggerFunction(payload){
 function load_JB()
 {	var spoofed=navigator.userAgent.indexOf("6.72")>=0 ? false : true;
 	if (!spoofed){
-		exploit();	
+		exploit(false);	
 	}else{
-		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 Exploit Complete ✔";document.getElementById("jailbreak").style.display="block";document.getElementById("exploit").style.display="none"; }, 500);
+		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 HEN Loaded Already ✔"; }, 500);
 	}
 }
 
@@ -71,17 +80,28 @@ function load_OLDJB()
 	if (!spoofed){
 		oldexploit();	
 	}else{
-		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 Exploit Complete ✔";document.getElementById("jailbreak").style.display="block";document.getElementById("exploit").style.display="none"; }, 500);
+		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 HEN Loaded Already ✔"; }, 500);
 	}
 }
 
-function exploit(){
+function load_Both()
+{	var spoofed=navigator.userAgent.indexOf("6.72")>=0 ? false : true;
+	if (!spoofed){
+		exploit(true);	
+	}else{
+		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 HEN Loaded Already ✔"; }, 500);
+	}
+}
+
+function exploit(val){
 	document.getElementById("progress").innerHTML="Running Jailbreak Exploit!!";
-	setTimeout(function(){jb();}, 500);
+	localStorage.Fail++;
+	setTimeout(function(){jb(val);}, 500);
 }
 
 function oldexploit(){
 	document.getElementById("progress").innerHTML="Running Jailbreak Exploit!!";
+	localStorage.Fail++;
 	setTimeout(function(){oldjb();}, 500);
 }
 
