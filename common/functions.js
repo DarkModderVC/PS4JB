@@ -69,7 +69,7 @@ function triggerFunction(payload){
 function load_JB()
 {	var spoofed=navigator.userAgent.indexOf("6.72")>=0 ? false : true;
 	if (!spoofed){
-		newexploit(true);	
+		exploit(false);	
 	}else{
 		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 HEN Loaded Already ✔"; }, 500);
 	}
@@ -91,12 +91,6 @@ function load_Both()
 	}else{
 		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 HEN Loaded Already ✔"; }, 500);
 	}
-}
-
-function newexploit(val){
-	document.getElementById("progress").innerHTML="Running Jailbreak Exploit!!";
-	localStorage.Fail++;
-	setTimeout(function(){newjb(val);}, 500);
 }
 
 function exploit(val){
