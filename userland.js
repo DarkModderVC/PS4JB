@@ -1,5 +1,7 @@
 var p;
 var chain;
+var payload_buffer;
+var payload_writer;
 var nogc = [];
 var webKitBase;
 var libSceLibcInternalBase;
@@ -241,11 +243,17 @@ function stage2(pld) {
     }
   } 
     
-  var payload_buffer = chain.syscall(477, new int64(0x26200000, 0x9), 0x300000, 7, 0x41000, -1, 0);
-  var payload_writer = array_from_address_m(payload_buffer, 0xC0000*4, 1);
-  write_payload(payload_writer,pld);
-  chain.call(payload_buffer);
-  document.getElementById("progress").innerHTML="Payload Loaded Successfully!!";
+  payload_buffer = chain.syscall(477, new int64(0x26200000, 0x9), 0x300000, 7, 0x41000, -1, 0);
+  payload_writer = array_from_address_m(payload_buffer, 0xC0000*4, 1);
+  
+  var pld_arr = pld.split(',');
+  for(var i = 0; i < pld_arr.length; i++) {
+	  write_payload(payload_writer,pld_arr[i]);
+	  chain.call(payload_buffer);
+  }
+  document.getElementById("pldooe").value="";
+  document.getElementById("pldooe_full").value="";
+  document.getElementById("progress").innerHTML="Payload(s) Loaded Successfully.. Reload to load next set of Payloads!!";
 }
 
 function stage3() {
@@ -961,8 +969,8 @@ function binloader() {
     }
   } 
     
-    var payload_buffer = chain.syscall(477, new int64(0x26200000, 0x9), 0x300000, 7, 0x41000, -1, 0);
-    var payload_loader = p.malloc32(0x1000);
+    payload_buffer = chain.syscall(477, new int64(0x26200000, 0x9), 0x300000, 7, 0x41000, -1, 0);
+    payload_loader = p.malloc32(0x1000);
 
     var loader_writer = payload_loader.backing;
     loader_writer[0] = 0x56415741;
@@ -1223,8 +1231,8 @@ function hen() {
     }
   } 
     
-  var payload_buffer = chain.syscall(477, new int64(0x26200000, 0x9), 0x300000, 7, 0x41000, -1, 0);
-  var payload_writer = p.array_from_address(payload_buffer, 0xC0000);
+  payload_buffer = chain.syscall(477, new int64(0x26200000, 0x9), 0x300000, 7, 0x41000, -1, 0);
+  payload_writer = p.array_from_address(payload_buffer, 0xC0000);
 
   payload_writer[0] = 0x000206E9;
   payload_writer[1] = 0xC0314800;
