@@ -116,26 +116,20 @@ function setupRW() {
 	//debug_log("-> Succesfully got addrof/fakeobj");
 	debug_log("Exploited Successfully");
 	
-	setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 7.5X";}, 3500);
+	setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 7.55";}, 1500);
 
 	/* Getting code execution */
 	/* ... */
 	document.getElementById("myProgress").remove();
 	document.getElementById('load').innerHTML='<tr>'+
 			'<td align="center" colspan="2" >'+
-			'<a href="#" class="button" onclick="toggle_payload(\'binloader\'); return false" style="width:100%">Bin Loader</a>&nbsp;'+
+			'<a href="#" id="mira" class="button" onclick="toggle_payload(\'mira\'); return false" style="width:28%">MIRA</a>&nbsp;'+
+			'<a href="#" id="ftp" class="button" onclick="toggle_payload(\'ftp\'); return false" style="width:28%">FTP</a>&nbsp;'+
+			'<a href="#" id="binloader" class="button" onclick="toggle_payload(\'binloader\'); return false" style="width:28%">Bin Loader</a>&nbsp;'+
 			'</td>'+
 			'</tr>'+
 			'<tr><td><br/></td></tr>';
 			/*'<tr>'+
-			'<td align="center" colspan="2" >'+
-			'<a href="#" id="hen" class="button" onclick="toggle_payload(\'mira\'); return false" style="width:28%">Mira</a>&nbsp;'+
-			'<a href="#" id="henb" class="button" onclick="toggle_payload(\'henb\'); return false" style="width:28%">HEN 2.1.3 b</a>&nbsp;'+
-			'<a href="#" id="spoof" class="button" onclick="toggle_payload(\'spoof\'); return false" style="width:28%">Spoof 9.99</a>&nbsp;'+
-			'</td>'+
-			'</tr>'+
-			'<tr><td><br/></td></tr>'+
-			'<tr>'+
 			'<td colspan="2" align="center"><hr><br></td>'+
 			'</tr>'+
 			'<tr>'+
@@ -177,6 +171,14 @@ function toggle_payload(pld){
 	if(pld == "binloader"){
 		preloadScripts(['blob.js', 'jb.js', 'netcat.js'], go);
 		document.getElementById("progress").innerHTML="Awaiting Payload.. Send Payload to port 9020..";
+		if(window.postExploit)
+			window.postExploit();
+	}else if(pld == "mira"){
+		preloadScripts(['blob.js', 'jb.js', 'mira.js', 'mira2.js', 'netcat.js'], go);
+		if(window.postExploit)
+			window.postExploit();
+	}else if(pld == "ftp"){
+		preloadScripts(['blob.js', 'jb.js', 'mira.js', 'ftp.js', 'netcat.js'], go);
 		if(window.postExploit)
 			window.postExploit();
 	}
