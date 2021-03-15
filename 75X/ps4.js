@@ -115,7 +115,7 @@ function setupRW() {
 		die("[!] Failed to setup addrof/fakeobj primitives");
 	
 	debug_log("Exploited Successfully.. Loading JB please wait !!");
-	if(confirm("Do you want to run Jailbreak?\nNote: Click 'Cancel' if you have already ran this after booting!!) && window.postExploit){
+	if(confirm("Do you want to run Jailbreak?\nNote: Click 'Cancel' if you have already ran this after booting!!") && window.postExploit){
 		window.postExploit();
 	}else{
 		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 7.55";}, 1500);
