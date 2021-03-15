@@ -113,95 +113,72 @@ function setupRW() {
 	g_jsview_butterfly = new Int64(bf);
 	if(!read64(g_jsview_butterfly.sub(16)).equals(new Int64("0xffff000000001337")))
 		die("[!] Failed to setup addrof/fakeobj primitives");
-	
-	debug_log("Exploited Successfully.. Loading JB please wait !!");
-	if(confirm("Do you want to run Jailbreak?\nNote: Click 'Cancel' if you have already ran this after booting!!") && window.postExploit){
-		window.postExploit();
-	}else{
-		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 7.55";}, 1500);
-		document.getElementById("myProgress").remove();
-		document.getElementById('load').innerHTML='<tr>'+
-				'<td align="center" colspan="2" >'+
-				'<a href="#" id="mira" class="button" onclick="toggle_payload(\'mira\'); return false" style="width:89%">MIRA</a>&nbsp;'+
-				'</td>'+
-				'</tr>'+
-				'<tr><td><br/></td></tr>'+
-				'<tr>'+
-				'<td colspan="2" align="center"><hr><br></td>'+
-				'</tr>'+
-				'<tr>'+
-				'<td align="center" colspan="2"><a href="#" id="app2usb" class="button" onclick="toggle_payload(\'app2usb\'); return false" style="width:43%">App2USB</a>&nbsp;'+
-				'<a href="#" id="binloader" class="button" onclick="toggle_payload(\'binloader\'); return false" style="width:43%">Bin Loader</a>&nbsp;</td>'+
-				'</tr><tr><td><br/></td></tr>'+
-				'<tr>'+
-				'<td align="center" colspan="2"><a href="#" id="disableupdates" class="button" onclick="toggle_payload(\'disableupdates\'); return false" style="width:43%">Disable Updates</a>&nbsp;'+
-				'<a href="#" id="enableupdates" class="button" onclick="toggle_payload(\'enableupdates\'); return false" style="width:43%">Enable Updates</a>&nbsp;</td>'+
-				'</tr><tr><td><br/></td></tr>'+
-				'<tr>'+
-				'<td align="center" colspan="2"><a href="#" id="dumper" class="button" onclick="toggle_payload(\'dumper\'); return false" style="width:43%">Dumper</a>&nbsp;'+
-				'<a href="#" id="ftp" class="button" onclick="toggle_payload(\'ftp\'); return false" style="width:43%">FTP</a>&nbsp;</td>'+
-				'</tr><tr><td><br/></td></tr>'+
-				'<tr>'+
-				'<tr>'+
-				'<td align="center" colspan="2">'+
-				'<a href="#" id="backup" class="button" onclick="toggle_payload(\'backup\'); return false" style="width:43%">Backup</a>&nbsp;'+
-				'<a href="#" id="restore" class="button" onclick="toggle_payload(\'restore\'); return false" style="width:43%">Restore</a>&nbsp;'+
-				'</td>'+
-				'</tr><tr><td><br/></td></tr>'+
-				'<tr>'+
-				'<td align="center" colspan="2"><a href="#" id="renamer" class="button" onclick="toggle_payload(\'renamer\'); return false" style="width:43%">Renamer</a>&nbsp;'+
-				'<a href="#" id="todex" class="button" onclick="toggle_payload(\'todex\'); return false" style="width:43%">To-Dex</a>&nbsp;</td>'+
-				'</tr><tr><td><br/></td></tr>'+
-				'<tr>';
-		document.getElementById("div1").remove();
-	}
+	//debug_log("-> Succesfully got addrof/fakeobj");
+	debug_log("Exploited Successfully");
+
+	setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 7.5X";}, 3500);
+
+	/* Getting code execution */
+	/* ... */
+	document.getElementById("myProgress").remove();
+	document.getElementById('load').innerHTML='<tr>'+
+			'<td align="center" colspan="2" >'+
+			'<a href="#" class="button" onclick="toggle_payload(\'binloader\'); return false" style="width:100%">Bin Loader</a>&nbsp;'+
+			'</td>'+
+			'</tr>'+
+			'<tr><td><br/></td></tr>';
+			/*'<tr>'+
+			'<td align="center" colspan="2" >'+
+			'<a href="#" id="hen" class="button" onclick="toggle_payload(\'mira\'); return false" style="width:28%">Mira</a>&nbsp;'+
+			'<a href="#" id="henb" class="button" onclick="toggle_payload(\'henb\'); return false" style="width:28%">HEN 2.1.3 b</a>&nbsp;'+
+			'<a href="#" id="spoof" class="button" onclick="toggle_payload(\'spoof\'); return false" style="width:28%">Spoof 9.99</a>&nbsp;'+
+			'</td>'+
+			'</tr>'+
+			'<tr><td><br/></td></tr>'+
+			'<tr>'+
+			'<td colspan="2" align="center"><hr><br></td>'+
+			'</tr>'+
+			'<tr>'+
+			'<td align="center" colspan="2"><a href="#" id="app2usb" class="button" onclick="toggle_payload(\'app2usb\'); return false" style="width:43%">App2USB</a>&nbsp;'+
+			'<a href="#" id="binloader" class="button" onclick="toggle_payload(\'binloader\'); return false" style="width:43%">Bin Loader</a>&nbsp;</td>'+
+			'</tr><tr><td><br/></td></tr>'+
+			'<tr>'+
+			'<td align="center" colspan="2"><a href="#" id="disableupdates" class="button" onclick="toggle_payload(\'disableupdates\'); return false" style="width:43%">Disable Updates</a>&nbsp;'+
+			'<a href="#" id="enableupdates" class="button" onclick="toggle_payload(\'enableupdates\'); return false" style="width:43%">Enable Updates</a>&nbsp;</td>'+
+			'</tr><tr><td><br/></td></tr>'+
+			'<tr>'+
+			'<td align="center" colspan="2"><a href="#" id="dumper" class="button" onclick="toggle_payload(\'dumper\'); return false" style="width:43%">Dumper</a>&nbsp;'+
+			'<a href="#" id="gtam132" class="button" onclick="toggle_payload(\'gtam132\'); return false" style="width:43%">GTAV M1 1.32</a>&nbsp;</td>'+
+			'</tr><tr><td><br/></td></tr>'+
+			'<tr>'+
+			'<tr>'+
+			'<td align="center" colspan="2">'+
+			'<a href="#" id="restore" class="button" onclick="toggle_payload(\'restore\'); return false" style="width:43%">Restore</a>&nbsp;'+
+			'<a href="#" id="fix30391" class="button" onclick="toggle_payload(\'fix30391\'); return false" style="width:43%;border-radius: 5px 0px 0px 5px;">CE-30391-6 Fix</a>&nbsp;'+
+			'</td>'+
+			'</tr><tr><td><br/></td></tr>'+
+			'<tr>'+
+			'<td align="center" colspan="2"><a href="#" id="ftp" class="button" onclick="toggle_payload(\'ftp\'); return false" style="width:43%">FTP</a>&nbsp;'+
+			'<a href="#" id="backup" class="button" onclick="toggle_payload(\'backup\'); return false" style="width:43%">BackUp</a>&nbsp;</td>'+
+			'</tr><tr><td><br/></td></tr>'+
+			'<tr>'+
+			'<td align="center" colspan="2"><a href="#" id="todex" class="button" onclick="toggle_payload(\'todex\'); return false" style="width:43%">To-DEX</a>&nbsp;'+
+			'<a href="#" id="webrte" class="button" onclick="toggle_payload(\'webrte\'); return false" style="width:43%">WebRTE</a>&nbsp;</td>'+
+			'</tr><tr><td><br/></td></tr>'+
+			'<tr>'+
+			'<td align="center" colspan="2"><a href="#" id="linuxloader" class="button" onclick="toggle_payload(\'linuxloader\'); return false" style="width:43%">Linux Loader</a>&nbsp;'+
+			'<a href="#" id="ps4debug" class="button" onclick="toggle_payload(\'ps4debug\'); return false" style="width:43%">PS4 Debug</a>&nbsp;</td>'+
+			'</tr>';*/
+	document.getElementById("div1").remove();
+
 }
 
 function toggle_payload(pld){
 	if(pld == "binloader"){
-		if(window.binloader)
-			window.binloader();
+		preloadScripts(['blob.js', 'jb.js', 'netcat.js'], go);
 		document.getElementById("progress").innerHTML="Awaiting Payload.. Send Payload to port 9020..";
-	}else if(pld == "mira"){
-		document.getElementById("progress").innerHTML="Loading MIRA.. Please wait..";
-		if(window.mira)
-			window.mira();
-	}else if(pld == "ftp"){
-		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
-		if(window.ftp)
-			window.ftp();
-	}else if(pld == "app2usb"){
-		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
-		if(window.app2usb)
-			window.app2usb();
-	}else if(pld == "disableupdates"){
-		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
-		if(window.disableupdates)
-			window.disableupdates();
-	}else if(pld == "enableupdates"){
-		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
-		if(window.enableupdates)
-			window.enableupdates();
-	}else if(pld == "backup"){
-		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
-		if(window.backup)
-			window.backup();
-	}else if(pld == "restore"){
-		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
-		if(window.restore)
-			window.restore();
-	}else if(pld == "renamer"){
-		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
-		if(window.renamer)
-			window.renamer();
-	}else if(pld == "todex"){
-		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
-		if(window.todex)
-			window.todex();
-	}else if(pld == "dumper"){
-		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
-		if(window.dumper)
-			window.dumper();
+		if(window.postExploit)
+			window.postExploit();
 	}
 }
 
@@ -526,11 +503,9 @@ function go() {
 	if(localStorage.is755Cached){
 		/* Init spray */
 		sprayHTMLTextArea();
-		if(window.midExploit){
-			window.midExploit();
-		}
+
 		g_input = input1;
 		/* Shape heap layout for obj. reuse */
 		prepareUAF();
 	}
-}
+} 
