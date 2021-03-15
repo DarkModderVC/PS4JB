@@ -53,7 +53,7 @@
 <body class="bg">
 <script>
 	if (localStorage.truefirm == null) {
-		if(navigator.userAgent.indexOf("6.72")>=0){localStorage.truefirm="index672.html";window.location.href="index672.html";}else if(navigator.userAgent.indexOf("7.0")>=0){localStorage.truefirm="index702.html";window.location.href = "index702.html";}
+		if(navigator.userAgent.indexOf("6.72")>=0){localStorage.truefirm="index672.html";window.location.href="index672.html";}else if(navigator.userAgent.indexOf("7.0")>=0){localStorage.truefirm="index702.html";window.location.href = "index702.html";}else if(navigator.userAgent.indexOf("7.5")>=0){localStorage.truefirm="75X/index.html";window.location.href = "75X/index.html";}
 	}else{
 		window.location.href = localStorage.truefirm;
 	}
@@ -63,8 +63,9 @@
 <table align="center" style="width:600px;margin-top:30px;">
 <tr>
 <td align="center" colspan="2" >
-<a href="index672.html" class="button" style="width:28%">6.72</a>
-<a href="index702.html" class="button" style="width:28%">7.02</a>
+<a href="index672.html" class="button" style="width:29%">6.72</a>
+<a href="index702.html" class="button" style="width:29%">7.02</a>
+<a href="75X/index.html" class="button" style="width:29%">7.5X</a>
 </td>
 </tr>
 </table></div>
