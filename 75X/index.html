@@ -72,6 +72,8 @@
 	</style>
 	<head>
 		<title>PS4 Jailbreak 7.55</title>
+	</head>
+	<body onload="go()" class="bg">
 		<script>
 			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!";localStorage.is755Cached=false;};
 			window.applicationCache.onprogress=function(a){document.getElementById("myBar").style.width=(Math.round(100*(a.loaded/a.total)))+"%";document.getElementById("myBar").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
@@ -92,12 +94,52 @@
 				}
 			}
 		</script>
-		<script src="functions.js"></script>
+		<script>
+		function print(){}
+
+		var scriptCode = '';
+
+		function preloadScripts(lst)
+		{
+			for(var i = 0; i < lst.length; i++)
+			{
+				var xhr = new XMLHttpRequest();
+				xhr.open('GET', lst[i], false);
+				xhr.send('');
+				scriptCode += xhr.responseText + '\n';
+			}
+		}
+
+		function done()
+		{
+			if(main_ret == 0 || main_ret == 179){
+				document.getElementById("progress").innerHTML="Payload Loaded Successfully!!";
+				read_ptr_at(0);
+			}
+			else{
+				alert("Jailbreak failed! Reboot your PS4 and try again.");
+			}
+		}
+
+		window.miraloader = function()
+		{
+			preloadScripts(['blob.js', 'jb.js', 'mira.js', 'netcat.js']);
+		}
+
+		window.postExploit = function()
+		{
+			setTimeout(function()
+			{	
+				eval.call(window, scriptCode);
+				done();
+			}, 100);
+
+		};
+
+		</script>
 		<script src="utils.js"></script>
 		<script src="int64.js"></script>
 		<script src="ps4.js"></script>
-	</head>
-	<body onload="go()" class="bg">
 		<h1 id="progress" class="titlehead">Loading.. Please Wait !!</h1><hr><br>
 		<button style="opacity:0" id="input1" onfocus="handle2()"></button>
 		<button style="opacity:0" id="input2"></button>

