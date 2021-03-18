@@ -1,0 +1,156 @@
+<html manifest="offlineCache.manifest">
+	<style>
+		.button {
+		  background-color: #003263;  
+		  border-radius: 5px;
+		  color: white;
+		  padding: .5em;
+		  text-decoration: none;
+		  height:100%;
+		  display:inline-table;
+		  font-family: system-ui;
+		}
+
+		.button:focus,
+		.button:hover {
+		  background-color: #007bff;
+		  color: White;
+		}
+
+		.titlehead {
+		  background-color: #003263;  
+		  border-radius: 5px;
+		  color: white;
+		  padding: .5em;
+		  text-decoration: none;
+		  text-align: center;
+		  margin-top: -10px;
+		  margin-bottom: -10px;
+		  font-family: system-ui;
+		}
+
+		.titlehead:focus,
+		.titlehead:hover {
+		  background-color: #007bff;
+		  color: White;
+		}
+
+		.bg {
+		  /* The image used */
+		  background-image: url("ps4.jpg");
+		  font-family: system-ui;
+		  /* Center and scale the image nicely */
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		}
+
+		#myProgress {
+		  border: 5px solid #FFFFFF;
+		  border-radius: 5px;
+		  background-color: #ddd;
+		  height: 45px;
+		  position: absolute;
+		  top:0;
+		  bottom: 250;
+		  left: 150;
+		  right: 150;
+		  margin: auto;
+		}
+
+		#myBar {
+		  width: 0%;
+		  height: 40px;
+		  background-color: #4CAF50;
+		  text-align: center;
+		  line-height: 30px;
+		  color: white;
+		  font-size: 35px;
+		  padding-top: 5px;
+		}
+
+	</style>
+	<head>
+		<title>PS4 Jailbreak 7.55</title>
+	</head>
+	<body onload="go()" class="bg">
+		<script>
+			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!";localStorage.is755Cached=false;};
+			window.applicationCache.onprogress=function(a){document.getElementById("myBar").style.width=(Math.round(100*(a.loaded/a.total)))+"%";document.getElementById("myBar").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
+			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";localStorage.is755Cached=true;setTimeout(function(){document.getElementById("progress").innerHTML="Turn Off the Internet & Reopen the Page to Run the Exploit!!"; }, 1500);};
+		</script>
+		<script>
+			var width = 0;
+			function frame1() {
+				var elem = document.getElementById("myBar");
+				var i=0;
+				var id = setInterval(fra, 10);
+				function fra(){
+				  if(i<10 && width<100){
+					  width++;
+					  elem.style.width = width + "%";
+					  elem.innerHTML = width  + "%";
+				  } i++;
+				}
+			}
+		</script>
+		<script>
+		function print(){}
+
+		var scriptCode = '';
+
+		function preloadScripts(lst)
+		{
+			for(var i = 0; i < lst.length; i++)
+			{
+				var xhr = new XMLHttpRequest();
+				xhr.open('GET', lst[i], false);
+				xhr.send('');
+				scriptCode += xhr.responseText + '\n';
+			}
+		}
+
+		function done()
+		{
+			if(main_ret == 0 || main_ret == 179){
+				document.getElementById("progress").innerHTML="Payload Loaded Successfully!!";
+				read_ptr_at(0);
+			}
+			else{
+				alert("Jailbreak failed! Reboot your PS4 and try again.");
+			}
+		}
+
+		window.miraloader = function()
+		{
+			preloadScripts(['blob.js', 'jb.js']);
+		}
+
+		window.postExploit = function()
+		{
+			setTimeout(function()
+			{	
+				eval.call(window, scriptCode);
+				done();
+			}, 100);
+
+		};
+
+		</script>
+		<script src="utils.js"></script>
+		<script src="int64.js"></script>
+		<script src="ps4.js"></script>
+		<h1 id="progress" class="titlehead">Loading.. Please Wait !!</h1><hr><br>
+		<button style="opacity:0" id="input1" onfocus="handle2()"></button>
+		<button style="opacity:0" id="input2"></button>
+		<button style="opacity:0" id="input3" onfocus="handle2()"></button>
+		<select style="opacity:0" id="select1">
+			<option value="value1">Value1</option>
+		</select>
+		<h1 id="myProgress">
+		  <div id="myBar">0%</div>
+		</h1>
+		<table id="load" align="center" style="width:600px;margin-top:30px;">
+		</table>
+	</body>
+</html>
