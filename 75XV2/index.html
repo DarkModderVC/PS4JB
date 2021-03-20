@@ -1,0 +1,279 @@
+<html manifest="offlineCache.manifest">
+	<style>
+		.button {
+		  background-color: #003263;  
+		  border-radius: 5px;
+		  color: white;
+		  padding: .5em;
+		  text-decoration: none;
+		  height:100%;
+		  display:inline-table;
+		  font-family: system-ui;
+		}
+
+		.button:focus,
+		.button:hover {
+		  background-color: #007bff;
+		  color: White;
+		}
+
+		.titlehead {
+		  background-color: #003263;  
+		  border-radius: 5px;
+		  color: white;
+		  padding: .5em;
+		  text-decoration: none;
+		  text-align: center;
+		  margin-top: -10px;
+		  margin-bottom: -10px;
+		  font-family: system-ui;
+		}
+
+		.titlehead:focus,
+		.titlehead:hover {
+		  background-color: #007bff;
+		  color: White;
+		}
+
+		.bg {
+		  /* The image used */
+		  background-image: url("ps4.jpg");
+		  font-family: system-ui;
+		  /* Center and scale the image nicely */
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		}
+
+		#myProgress {
+		  border: 5px solid #FFFFFF;
+		  border-radius: 5px;
+		  background-color: #ddd;
+		  height: 45px;
+		  position: absolute;
+		  top:0;
+		  bottom: 250;
+		  left: 150;
+		  right: 150;
+		  margin: auto;
+		}
+
+		#myBar {
+		  width: 0%;
+		  height: 40px;
+		  background-color: #4CAF50;
+		  text-align: center;
+		  line-height: 30px;
+		  color: white;
+		  font-size: 35px;
+		  padding-top: 5px;
+		}
+		
+		.switch {
+		  position: relative;
+		  display: inline-block;
+		  width: 60px;
+		  height: 34px;
+		}
+
+		.switch input { 
+		  opacity: 0;
+		  width: 0;
+		  height: 0;
+		}
+
+		.slider {
+		  position: absolute;
+		  cursor: pointer;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  bottom: 0;
+		  background-color: #2196F3;
+		  -webkit-transition: .4s;
+		  transition: .4s;
+		}
+
+		.slider:before {
+		  position: absolute;
+		  content: "";
+		  height: 26px;
+		  width: 26px;
+		  left: 4px;
+		  bottom: 4px;
+		  background-color: white;
+		  -webkit-transition: .4s;
+		  transition: .4s;
+		}
+
+		input:checked + .slider {
+		  background-color: #2196F3;
+		}
+
+		input:focus + .slider {
+		  box-shadow: 0 0 1px #2196F3;
+		}
+
+		input:checked + .slider:before {
+		  -webkit-transform: translateX(26px);
+		  -ms-transform: translateX(26px);
+		  transform: translateX(26px);
+		}
+
+		/* Rounded sliders */
+		.slider.round {
+		  border-radius: 34px;
+		}
+
+		.slider.round:before {
+		  border-radius: 50%;
+		}
+
+	</style>
+	<head>
+		<title>PS4 Jailbreak 7.5X</title>
+	</head>
+	<body onload="go()" class="bg">
+		<script>
+			if(localStorage.jb==null){localStorage.jb='jb.js'}
+			var fw = (navigator.userAgent.substring(navigator.userAgent.indexOf('5.0 (') + 19, navigator.userAgent.indexOf(') Apple'))).replace('.', '');;
+			if(window.applicationCache.status==2){localStorage.is755Cached=true;}
+			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!";localStorage.is755Cached=false;};
+			window.applicationCache.onprogress=function(a){document.getElementById("myBar").style.width=(Math.round(100*(a.loaded/a.total)))+"%";document.getElementById("myBar").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
+			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";localStorage.is755Cached=true;setTimeout(function(){document.getElementById("progress").innerHTML="Turn Off the Internet & Reopen the Page to Run the Exploit!!"; }, 1500);};
+		</script>
+		<script>
+			var width = 0;
+			function frame1() {
+				var elem = document.getElementById("myBar");
+				var i=0;
+				var id = setInterval(fra, 10);
+				function fra(){
+				  if(i<10 && width<100){
+					  width++;
+					  elem.style.width = width + "%";
+					  elem.innerHTML = width  + "%";
+				  } i++;
+				}
+			}
+		</script>
+		<script>
+		function print(){}
+
+		var scriptCode = '';
+
+		function preloadScripts(lst)
+		{	
+			scriptCode = '';
+			for(var i = 0; i < lst.length; i++)
+			{
+				var xhr = new XMLHttpRequest();
+				xhr.open('GET', lst[i], false);
+				xhr.send('');
+				scriptCode += xhr.responseText + '\n';
+			}
+		}
+		
+		function done(){
+			document.getElementById("myProgress").remove();
+			if(document.getElementById("progress").innerHTML.includes("Failed")){
+				document.getElementById('load').innerHTML='<tr style="color:white;">'+
+					'<td id="oexp" align="right" style="color:gray; width: 45%;font-family: system-ui;font-size: 20px;">Preload Old Exploit &nbsp;</td>'+
+					'<td style="width: 10%;"><label class="switch"><input checked id="tog" onclick="if(document.getElementById(\'tog\').checked){document.getElementById(\'oexp\').style.color=\'gray\';document.getElementById(\'nexp\').style.color=\'white\';localStorage.jb=\'jb.js\';}else{document.getElementById(\'nexp\').style.color=\'gray\';document.getElementById(\'oexp\').style.color=\'white\';localStorage.jb=\'oldjb.js\';}" type="checkbox"><span class="slider round"></span></label></td>'+
+					'<td id="nexp" align="left" style="width: 45%;font-family: system-ui;font-size: 20px;">&nbsp; Preload New Exploit</td>'+
+					'</tr>';
+			}else{
+				document.getElementById('load').innerHTML='<tr style="color:white;">'+
+					'<td id="oexp" align="right" style="color:gray; width: 45%;font-family: system-ui;font-size: 20px;">Preload Old Exploit &nbsp;</td>'+
+					'<td style="width: 10%;"><label class="switch"><input checked id="tog" onclick="if(document.getElementById(\'tog\').checked){document.getElementById(\'oexp\').style.color=\'gray\';document.getElementById(\'nexp\').style.color=\'white\';localStorage.jb=\'jb.js\';}else{document.getElementById(\'nexp\').style.color=\'gray\';document.getElementById(\'oexp\').style.color=\'white\';localStorage.jb=\'oldjb.js\';}" type="checkbox"><span class="slider round"></span></label></td>'+
+					'<td id="nexp" align="left" style="width: 45%;font-family: system-ui;font-size: 20px;">&nbsp; Preload New Exploit</td>'+
+					'</tr><br>'+
+					'<tr><td><br/></td></tr>'+
+					'<tr>'+
+					'<td align="center" colspan="3" >'+
+					'<a href="#" id="mira75X" class="button" onclick="toggle_payload(\'mira75X\'); return false" style="width:44.5%">MIRA 7.5X</a>&nbsp;'+
+					'<a href="#" id="mira2b" class="button" onclick="toggle_payload(\'mira2b\'); return false" style="width:44.5%">MIRA + Spoof</a>&nbsp;'+
+					'</td>'+
+					'</tr>'+
+					'<tr><td><br/></td></tr>'+
+					'<tr>'+
+					'<td colspan="3" align="center"><hr><br></td>'+
+					'</tr>'+
+					'<tr>'+
+					'<td align="center" colspan="3"><a href="#" id="app2usb" class="button" onclick="toggle_payload(\'app2usb\'); return false" style="width:44.5%">App2USB</a>&nbsp;'+
+					'<a href="#" id="binloader" class="button" onclick="toggle_payload(\'binloader\'); return false" style="width:44.5%">Bin Loader</a>&nbsp;</td>'+
+					'</tr><tr><td><br/></td></tr>'+
+					'<tr>'+
+					'<td align="center" colspan="3"><a href="#" id="disableupdates" class="button" onclick="toggle_payload(\'disableupdates\'); return false" style="width:29%">Disable Updates</a>&nbsp;'+
+					'<a href="#" id="enableupdates" class="button" onclick="toggle_payload(\'enableupdates\'); return false" style="width:29%">Enable Updates</a>&nbsp;'+
+					'<a href="#" id="ftp" class="button" onclick="toggle_payload(\'ftp\'); return false" style="width:29%">FTP</a>&nbsp;</td>'+
+					'</tr><tr><td><br/></td></tr>'+
+					'<tr>'+
+					'<td align="center" colspan="3"><a href="#" id="dumper" class="button" onclick="toggle_payload(\'dumper\'); return false" style="width:29%">Dumper</a>&nbsp;'+
+					'<a href="#" id="exitidu" class="button" onclick="toggle_payload(\'exitidu\'); return false" style="width:29%">Exit IDU</a>&nbsp;'+
+					'<a href="#" id="enablebrowser" class="button" onclick="toggle_payload(\'enablebrowser\'); return false" style="width:29%">Enable Browser</a>&nbsp;</td>'+
+					'</tr><tr><td><br/></td></tr>'+
+					'<tr>'+
+					'<tr>'+
+					'<td align="center" colspan="3">'+
+					'<a href="#" id="backup" class="button" onclick="toggle_payload(\'backup\'); return false" style="width:29%">Backup</a>&nbsp;'+
+					'<a href="#" id="restore" class="button" onclick="toggle_payload(\'restore\'); return false" style="width:29%">Restore</a>&nbsp;'+
+					'<a href="#" id="historyblocker" class="button" onclick="toggle_payload(\'historyblocker\'); return false" style="width:29%">History Blocker</a>&nbsp;</td>'+
+					'</tr><tr><td><br/></td></tr>'+
+					'<tr>'+
+					'<td align="center" colspan="3"><a href="#" id="renamer" class="button" onclick="toggle_payload(\'rifrenamer\'); return false" style="width:29%">Rif Renamer</a>&nbsp;'+
+					'<a href="#" id="todex" class="button" onclick="toggle_payload(\'todex\'); return false" style="width:29%">To-Dex</a>&nbsp;'+
+					'<a href="#" id="disableaslr" class="button" onclick="toggle_payload(\'disableaslr\'); return false" style="width:29%">Disable ASLR</a>&nbsp;</td>'+
+					'</tr><tr><td><br/></td></tr>'+
+					'<tr>'+
+					'<td align="center" colspan="3"><a href="#" id="kerneldumper" class="button" onclick="toggle_payload(\'kerneldumper\'); return false" style="width:29%">Kernel Dumper</a>&nbsp;'+
+					'<a href="#" id="kernelclock" class="button" onclick="toggle_payload(\'kernelclock\'); return false" style="width:29%">Kernel Clock</a>&nbsp;'+
+					'<a href="#" id="fancontrol" class="button" onclick="toggle_payload(\'fancontrol\'); return false" style="width:29%">Fan Control</a>&nbsp;</td>'+
+					'</tr><tr><td><br/></td></tr>';
+			}
+			if(localStorage.jb=='jb.js'){document.getElementById('tog').checked=true;}else{document.getElementById('tog').checked=false;}
+		}
+		
+		window.midExploit = function()
+		{
+			preloadScripts(['common/exploit.js','jb/'+localStorage.jb]);
+		}
+
+		window.postExploit = function()
+		{
+			setTimeout(function()
+			{	
+				eval.call(window, scriptCode);
+				done();
+			}, 100);
+
+		};
+		
+		window.postPayload = function()
+		{
+			setTimeout(function()
+			{	
+				eval.call(window, scriptCode);
+				//done();
+			}, 100);
+
+		};
+
+		</script>
+		<script src="./webkit/utils.js"></script>
+		<script src="./webkit/int64.js"></script>
+		<script src="./webkit/ps4.js"></script>
+		<h1 id="progress" class="titlehead">Loading.. Please Wait !!</h1><hr><br>
+		<button style="opacity:0" id="input1" onfocus="handle2()"></button>
+		<button style="opacity:0" id="input2"></button>
+		<button style="opacity:0" id="input3" onfocus="handle2()"></button>
+		<select style="opacity:0" id="select1">
+			<option value="value1">Value1</option>
+		</select>
+		<h1 id="myProgress">
+		  <div id="myBar">0%</div>
+		</h1>
+		<table id="load" align="center" style="width:600px;margin-top:30px;">
+		</table>
+	</body>
+</html>

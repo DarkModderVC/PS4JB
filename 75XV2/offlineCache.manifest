@@ -1,0 +1,35 @@
+CACHE MANIFEST
+# v1.0 : 16-03-2021
+ 
+index.html
+ps4.jpg
+webkit/utils.js
+webkit/int64.js
+payloads/loader.js
+jb/jb.js
+jb/oldjb.js
+webkit/ps4.js
+common/exploit.js
+payloads/preloader.js
+payloads/preloader750.js
+payloads/preloader751.js
+payloads/mira750.js
+payloads/mira751.js
+payloads/mira755.js
+payloads/mira2b.js
+payloads/ftp.js
+payloads/app2usb.js
+payloads/disableupdates.js
+payloads/enableupdates.js
+payloads/todex.js
+payloads/rifrenamer.js
+payloads/backup.js
+payloads/restore.js
+payloads/dumper.js
+payloads/kerneldumper.js
+payloads/kernelclock.js
+payloads/fancontrol.js
+payloads/disableaslr.js
+payloads/enablebrowser.js
+payloads/historyblocker.js
+payloads/exitidu.js
