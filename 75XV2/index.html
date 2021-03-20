@@ -231,7 +231,7 @@
 					'<a href="#" id="fancontrol" class="button" onclick="toggle_payload(\'fancontrol\'); return false" style="width:29%">Fan Control</a>&nbsp;</td>'+
 					'</tr><tr><td><br/></td></tr>';
 			}
-			if(localStorage.jb=='jb.js'){document.getElementById('tog').checked=true;}else{document.getElementById('tog').checked=false;}
+			if(localStorage.jb=='jb.js'){document.getElementById('tog').checked=true;document.getElementById('oexp').style.color='gray';document.getElementById('nexp').style.color='white';}else{document.getElementById('tog').checked=false;document.getElementById('oexp').style.color='white';document.getElementById('nexp').style.color='gray';}
 		}
 		
 		window.midExploit = function()
