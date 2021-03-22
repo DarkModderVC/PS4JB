@@ -27,9 +27,11 @@ payloads/backup.js
 payloads/restore.js
 payloads/dumper.js
 payloads/kerneldumper.js
-payloads/kernelclock.js
 payloads/fancontrol.js
 payloads/disableaslr.js
 payloads/enablebrowser.js
 payloads/historyblocker.js
 payloads/exitidu.js
+payloads/goldhen.js
+payloads/ps4debug.js
+payloads/webrte.js
