@@ -93,6 +93,18 @@
 		  -webkit-transition: .4s;
 		  transition: .4s;
 		}
+		
+		.slider.new {
+		  position: absolute;
+		  cursor: pointer;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  bottom: 0;
+		  background-color: #585858;
+		  -webkit-transition: .4s;
+		  transition: .4s;
+		}
 
 		.slider:before {
 		  position: absolute;
@@ -135,7 +147,8 @@
 	</head>
 	<body onload="go()" class="bg">
 		<script>
-			if(localStorage.jb==null){localStorage.jb='jb.js'}
+			if(localStorage.jb==null){localStorage.jb='jb.js';}
+			if(localStorage.autoExploit==null){localStorage.autoExploit=false;}
 			var fw = (navigator.userAgent.substring(navigator.userAgent.indexOf('5.0 (') + 19, navigator.userAgent.indexOf(') Apple'))).replace('.', '');;
 			if(window.applicationCache.status==2){localStorage.is75XV2Cached=true;}
 			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!";localStorage.is75XV2Cached=false;};
@@ -178,16 +191,31 @@
 			document.getElementById("myProgress").remove();
 			if(document.getElementById("progress").innerHTML.includes("Failed")){
 				document.getElementById('load').innerHTML='<tr style="color:white;">'+
-					'<td id="oexp" align="right" style="color:gray; width: 45%;font-family: system-ui;font-size: 20px;">Preload Old Exploit &nbsp;</td>'+
-					'<td style="width: 10%;"><label class="switch"><input checked id="tog" onclick="if(document.getElementById(\'tog\').checked){document.getElementById(\'oexp\').style.color=\'gray\';document.getElementById(\'nexp\').style.color=\'white\';localStorage.jb=\'jb.js\';}else{document.getElementById(\'nexp\').style.color=\'gray\';document.getElementById(\'oexp\').style.color=\'white\';localStorage.jb=\'oldjb.js\';}" type="checkbox"><span class="slider round"></span></label></td>'+
+					'<td id="aexp" colspan="2" align="right" style="width: 12%;font-family: system-ui;font-size: 20px;">Autoload Exploit &nbsp;</td>'+
+					'<td style="width: 10%;"><label class="switch"><input id="tog1" onclick="if(document.getElementById(\'tog1\').checked){document.getElementById(\'toggleExploit\').style.display=\'table-row\';localStorage.autoExploit=true;}else{document.getElementById(\'toggleExploit\').style.display=\'none\';localStorage.autoExploit=false;}" type="checkbox"><span class="slider new round"></span></label></td>'+
+					'</tr>'+
+					'<tr><td><br/></td></tr>'+
+					'<tr id="toggleExploit" style="color:white;">'+
+					'<td id="oexp" align="right" style="color:#585858; width: 45%;font-family: system-ui;font-size: 20px;">Preload Old Exploit &nbsp;</td>'+
+					'<td style="width: 10%;"><label class="switch"><input checked id="tog" onclick="if(document.getElementById(\'tog\').checked){document.getElementById(\'oexp\').style.color=\'#585858\';document.getElementById(\'nexp\').style.color=\'white\';localStorage.jb=\'jb.js\';}else{document.getElementById(\'nexp\').style.color=\'#585858\';document.getElementById(\'oexp\').style.color=\'white\';localStorage.jb=\'oldjb.js\';}" type="checkbox"><span class="slider round"></span></label></td>'+
 					'<td id="nexp" align="left" style="width: 45%;font-family: system-ui;font-size: 20px;">&nbsp; Preload New Exploit</td>'+
 					'</tr>';
+				if(localStorage.autoExploit=="true"){document.getElementById('tog1').checked=true;document.getElementById('toggleExploit').style.display='table-row';}else{document.getElementById('tog1').checked=false;document.getElementById('toggleExploit').style.display='none';}
 			}else{
 				document.getElementById('load').innerHTML='<tr style="color:white;">'+
-					'<td id="oexp" align="right" style="color:gray; width: 45%;font-family: system-ui;font-size: 20px;">Preload Old Exploit &nbsp;</td>'+
-					'<td style="width: 10%;"><label class="switch"><input checked id="tog" onclick="if(document.getElementById(\'tog\').checked){document.getElementById(\'oexp\').style.color=\'gray\';document.getElementById(\'nexp\').style.color=\'white\';localStorage.jb=\'jb.js\';}else{document.getElementById(\'nexp\').style.color=\'gray\';document.getElementById(\'oexp\').style.color=\'white\';localStorage.jb=\'oldjb.js\';}" type="checkbox"><span class="slider round"></span></label></td>'+
+					'<td id="aexp" colspan="2" align="right" style="width: 12%;font-family: system-ui;font-size: 20px;">Autoload Exploit &nbsp;</td>'+
+					'<td style="width: 10%;"><label class="switch"><input id="tog1" onclick="if(document.getElementById(\'tog1\').checked){document.getElementById(\'toggleExploit\').style.display=\'table-row\';document.getElementById(\'mexp\').style.display=\'none\';localStorage.autoExploit=true;}else{document.getElementById(\'toggleExploit\').style.display=\'none\';document.getElementById(\'mexp\').style.display=\'table-row\';localStorage.autoExploit=false;}" type="checkbox"><span class="slider new round"></span></label></td>'+
+					'</tr>'+
+					'<tr><td><br/></td></tr>'+
+					'<tr id="toggleExploit" style="color:white;">'+
+					'<td id="oexp" align="right" style="color:#585858; width: 45%;font-family: system-ui;font-size: 20px;">Preload Old Exploit &nbsp;</td>'+
+					'<td style="width: 10%;"><label class="switch"><input checked id="tog" onclick="if(document.getElementById(\'tog\').checked){document.getElementById(\'oexp\').style.color=\'#585858\';document.getElementById(\'nexp\').style.color=\'white\';localStorage.jb=\'jb.js\';}else{document.getElementById(\'nexp\').style.color=\'#585858\';document.getElementById(\'oexp\').style.color=\'white\';localStorage.jb=\'oldjb.js\';}" type="checkbox"><span class="slider round"></span></label></td>'+
 					'<td id="nexp" align="left" style="width: 45%;font-family: system-ui;font-size: 20px;">&nbsp; Preload New Exploit</td>'+
-					'</tr><br>'+
+					'</tr>'+
+					'<tr id="mexp">'+
+					'<td align="center" colspan="3"><a href="#" id="exploit_old" class="button" onclick="toggle_payload(\'exploit_old\'); return false" style="width:44.5%">Old Exploit</a>&nbsp;'+
+					'<a href="#" id="exploit" class="button" onclick="toggle_payload(\'exploit\'); return false" style="width:44.5%">New Exploit</a>&nbsp;</td>'+
+					'</tr>'+
 					'<tr><td><br/></td></tr>'+
 					'<tr>'+
 					'<td align="center" colspan="3" >'+
@@ -231,14 +259,18 @@
 					'<td align="center" colspan="3"><a href="#" id="kerneldumper" class="button" onclick="toggle_payload(\'kerneldumper\'); return false" style="width:29%">Kernel Dumper</a>&nbsp;'+
 					'<a href="#" id="webrte" class="button" onclick="toggle_payload(\'webrte\'); return false" style="width:29%">WebRTE</a>&nbsp;'+
 					'<a href="#" id="fancontrol" class="button" onclick="toggle_payload(\'fancontrol\'); return false" style="width:29%">Fan Control</a>&nbsp;</td>'+
-					'</tr><tr><td><br/></td></tr>';
+					'</tr>';
+				if(localStorage.autoExploit=="true"){document.getElementById('tog1').checked=true;document.getElementById('toggleExploit').style.display='table-row';document.getElementById('mexp').style.display='none';}else{document.getElementById('tog1').checked=false;document.getElementById('toggleExploit').style.display='none';document.getElementById('mexp').style.display='table-row';}
 			}
-			if(localStorage.jb=='jb.js'){document.getElementById('tog').checked=true;document.getElementById('oexp').style.color='gray';document.getElementById('nexp').style.color='white';}else{document.getElementById('tog').checked=false;document.getElementById('oexp').style.color='white';document.getElementById('nexp').style.color='gray';}
+			if(localStorage.jb=='jb.js'){document.getElementById('tog').checked=true;document.getElementById('oexp').style.color='#585858';document.getElementById('nexp').style.color='white';}else{document.getElementById('tog').checked=false;document.getElementById('oexp').style.color='white';document.getElementById('nexp').style.color='#585858';}
 		}
 		
 		window.midExploit = function()
 		{
-			preloadScripts(['common/exploit.js','jb/'+localStorage.jb]);
+			if(localStorage.autoExploit=="true")
+				preloadScripts(['common/exploit.js','jb/'+localStorage.jb]);
+			else
+				preloadScripts(['common/exploit.js']);
 		}
 
 		window.postExploit = function()
@@ -275,7 +307,7 @@
 		<h1 id="myProgress">
 		  <div id="myBar">0%</div>
 		</h1>
-		<table id="load" align="center" style="width:600px;margin-top:30px;">
+		<table id="load" align="center" style="width:600px;margin-top:-10px;">
 		</table>
 	</body>
 </html>

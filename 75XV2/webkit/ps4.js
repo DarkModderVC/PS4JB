@@ -114,7 +114,10 @@ function setupRW() {
 	g_jsview_butterfly = new Int64(bf);
 	if(!read64(g_jsview_butterfly.sub(16)).equals(new Int64("0xffff000000001337")))
 		die("[!] Failed to setup addrof/fakeobj primitives");
-	debug_log("-> WebKit Exploit Complete.. Running Kernel Exploit !!");
+	if(localStorage.autoExploit=="true")
+		debug_log("-> WebKit Exploit Complete.. Running Kernel Exploit !!");
+	else
+		debug_log("-> WebKit Exploit Complete.. Run the Kernel Exploit to Jailbreak !!");
 
 	/* Getting code execution */
 	/* ... */
@@ -124,7 +127,13 @@ function setupRW() {
 }
 
 function toggle_payload(pld){
-	if(pld == "binloader"){
+	if(pld == "exploit"){
+		document.getElementById("progress").innerHTML="Running Jailbreak.. Please wait!!";
+		preloadScripts(['jb/jb.js']);
+	}else if(pld == "exploit_old"){
+		document.getElementById("progress").innerHTML="Running Jailbreak.. Please wait!!";
+		preloadScripts(['jb/oldjb.js']);
+	}else if(pld == "binloader"){
 		document.getElementById("progress").innerHTML="Awaiting Payload.. Send Payload to port 9020..";
 		preloadScripts(['payloads/preloader.js', 'payloads/loader.js']);
 	}else if(pld == "mira75X"){
