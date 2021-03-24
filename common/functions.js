@@ -6,7 +6,7 @@ function payload_finished(payload)
 	} else{
 		setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 Payload Loaded Succesfully !!"; }, 7000);
 	}
-	if(payload == "hen" || payload == "mirahen" || payload == "miranohb" || payload == "miraunofficial"){
+	if(payload == "hen" || payload == "mirahen" || payload == "goldhen" || payload == "miraunofficial"){
 		localStorage.Fail--;
 		localStorage.Success++;
 		document.getElementById("success").innerHTML="Success: "+localStorage.Success;
@@ -45,9 +45,9 @@ function triggerFunction(payload){
 	}else if(payload == "mirahen"){
 		localStorage.Fail++;
 		mirahen();
-	}else if(payload == "miranohb"){
+	}else if(payload == "goldhen"){
 		localStorage.Fail++;
-		miranohb();
+		goldhen();
 	}else if(payload == "miraunofficial"){
 		localStorage.Fail++;
 		miraunofficial();
