@@ -8,7 +8,7 @@ common/exploit.js
 jb/jb.js
 jb/oldjb.js
 payloads/mirahen.js
-payloads/miranohb.js
+payloads/goldhen.js
 payloads/miraunofficial.js
 payloads/preloader.js
 payloads/loader.js

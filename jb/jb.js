@@ -3,7 +3,7 @@ function addrof(x) {leaker_obj.a = x;return i48_get(leaker_arr);}function fakeob
 if(main_ret == 179 || main_ret == 0){
 	localStorage.Fail--;
 	setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 6.72 Exploit Complete ✔";
-	if(val){load_payload('hen');}
+	if(val){load_payload('goldhen');}
 	else{document.getElementById("jailbreak").style.display="block";document.getElementById("exploit").style.display="none";}}, 500);
 } else{
 	document.getElementById("fail").innerHTML="Fail: "+localStorage.Fail;
