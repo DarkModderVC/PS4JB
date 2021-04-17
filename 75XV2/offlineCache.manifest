@@ -32,6 +32,7 @@ payloads/disableaslr.js
 payloads/enablebrowser.js
 payloads/historyblocker.js
 payloads/exitidu.js
+payloads/goldhen.js
 payloads/goldhen750.js
 payloads/goldhen751.js
 payloads/goldhen755.js
