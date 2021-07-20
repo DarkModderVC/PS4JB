@@ -47,7 +47,7 @@ function triggerFunction(payload){
 		mirahen();
 	}else if(payload == "goldhen"){
 		localStorage.Fail++;
-		goldhen();
+		goldhen_1_1_672();
 	}else if(payload == "miraunofficial"){
 		localStorage.Fail++;
 		miraunofficial();
