@@ -22,7 +22,7 @@ var sendPayload = function(url, data, onLoadEndCallback) {
 
 function LoadviaGoldhen(PLfile){
 		var xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://localhost:9090/status");
+    xhr.open("POST", "http://127.0.0.1:9090/status");
 		xhr.send();
 		xhr.onerror = function(){
 			progress.innerHTML="Enable Binloader server from GoldHEN under Settings Before Running the Payloads !!";
@@ -35,7 +35,7 @@ function LoadviaGoldhen(PLfile){
 		  getPayload(PLfile, function (xhr) {
 				if ((xhr.status === 200 || xhr.status === 304) && xhr.response) {
 				   //Sending bins via IP POST Method
-           sendPayload("http://localhost:9090", xhr.response, function (xhr) {
+           sendPayload("http://127.0.0.1:9090", xhr.response, function (xhr) {
             if (xhr.status === 200) {
               progress.innerHTML="Payload Loaded Successfully !!";
 					   }else{
