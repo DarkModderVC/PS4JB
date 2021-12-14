@@ -1,0 +1,283 @@
+<html manifest="offlineCache.manifest">
+	<style>
+		.button {
+		  background-color: #003263;  
+		  border-radius: 5px;
+		  color: white;
+		  padding: .5em;
+		  text-decoration: none;
+		  height:100%;
+		  display:inline-table;
+		  font-family: system-ui;
+		}
+
+		.button:focus,
+		.button:hover {
+		  background-color: #007bff;
+		  color: White;
+		}
+
+		.titlehead {
+		  background-color: #003263;  
+		  border-radius: 5px;
+		  color: white;
+		  padding: .5em;
+		  text-decoration: none;
+		  text-align: center;
+		  margin-top: -10px;
+		  margin-bottom: -10px;
+		  font-family: system-ui;
+		}
+
+		.titlehead:focus,
+		.titlehead:hover {
+		  background-color: #007bff;
+		  color: White;
+		}
+
+		.bg {
+		  /* The image used */
+		  background-image: url("ps4.jpg");
+
+		  
+
+		  /* Center and scale the image nicely */
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		}
+	</style>
+	<head>
+		<title>PS4 Jailbreak 9.00</title>
+		<script>
+			function allset() {
+				document.getElementById("progress").innerHTML="PS4 Jailbreak 9.00 GOLDHEN Loaded Successfully ✔";
+			}
+		</script>
+		<script src="int64.js"></script>
+		<script src="rop.js"></script>
+		<script src="kexploit.js"></script>
+		<script src="webkit.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</head>
+	<body class="bg">
+		<script>
+			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!"};
+			window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML="Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed"};
+			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";setTimeout(function(){document.getElementById("progress").innerHTML="Turn Off the Internet & Reopen the Page to Run the Exploit!!"; }, 1500);};
+		</script>
+		<script>
+			function load_PS4Debug(){
+				progress.innerHTML="Payload Sending... Please Wait !!";
+				PLfile = "payloads/ps4debug.bin";
+				LoadviaGoldhen(PLfile);
+			}
+
+			function load_permanentuart(){
+				progress.innerHTML="Payload Sending... Please Wait !!";
+				PLfile = "payloads/permanentuart.bin";
+				LoadviaGoldhen(PLfile);
+			}
+
+			function load_App2USB(){
+				progress.innerHTML="Payload Sending... Please Wait !!";
+				PLfile = "payloads/app2usb.bin";
+				LoadviaGoldhen(PLfile);
+			}
+
+			function load_BackupDB(){
+				progress.innerHTML="Payload Sending... Please Wait !!";
+				PLfile = "payloads/backupdb.bin";
+				LoadviaGoldhen(PLfile);
+			}
+
+			function load_AppDumper(){
+				progress.innerHTML="Payload Sending... Please Wait !!";
+				PLfile = "payloads/appdumper.bin";
+				LoadviaGoldhen(PLfile);
+			}
+
+			function load_KernelDumper(){
+				progress.innerHTML="Payload Sending... Please Wait !!";
+				PLfile = "payloads/kerneldumper.bin";
+				LoadviaGoldhen(PLfile);
+			}
+
+			function load_ModuleDumper(){
+				progress.innerHTML="Payload Sending... Please Wait !!";
+				PLfile = "payloads/mdumper.bin";
+				LoadviaGoldhen(PLfile);
+			}
+
+			function load_RestoreDB(){
+				progress.innerHTML="Payload Sending... Please Wait !!";
+				PLfile = "payloads/restoredb.bin";
+				LoadviaGoldhen(PLfile);
+			}
+
+			function load_DisableASLR(){
+				progress.innerHTML="Payload Sending... Please Wait !!";
+				PLfile = "payloads/disableaslr.bin";
+				LoadviaGoldhen(PLfile);
+			}
+
+			function load_DisableUpdates(){
+				progress.innerHTML="Payload Sending... Please Wait !!";
+				PLfile = "payloads/disableupdates.bin";
+				LoadviaGoldhen(PLfile);
+			}
+
+			function load_EnableUpdates(){
+				progress.innerHTML="Payload Sending... Please Wait !!";
+				PLfile = "payloads/enbaleupdates.bin";
+				LoadviaGoldhen(PLfile);
+			}
+
+			function load_EnableBrowser(){
+				progress.innerHTML="Payload Sending... Please Wait !!";
+				PLfile = "payloads/enbalebrowser.bin";
+				LoadviaGoldhen(PLfile);
+			}
+
+			function load_ExitIDU(){
+				progress.innerHTML="Payload Sending... Please Wait !!";
+				PLfile = "payloads/exitidu.bin";
+				LoadviaGoldhen(PLfile);
+			}
+			  
+			function load_FTP(){
+				progress.innerHTML="Payload Sending... Please Wait !!";
+				PLfile = "payloads/ftp.bin";
+				LoadviaGoldhen(PLfile);
+			}
+			  
+			function load_HistoryBlocker(){
+				progress.innerHTML="Payload Sending... Please Wait !!";
+				PLfile = "payloads/historyblocker.bin";
+				LoadviaGoldhen(PLfile);
+			}
+			  
+			function load_RIFRenamer(){
+				progress.innerHTML="Payload Sending... Please Wait !!";
+				PLfile = "payloads/rifrenamer.bin";
+				LoadviaGoldhen(PLfile);
+			}
+			  
+			function load_Orbis(){
+				progress.innerHTML="Payload Sending... Please Wait !!";
+				PLfile = "payloads/Orbis-Toolbox-900.bin";
+				LoadviaGoldhen(PLfile);
+			}
+
+			function load_Linux(){
+				progress.innerHTML="Payload Sending... Please Wait !!";
+				PLfile = "payloads/LinuxLoader.bin";
+				LoadviaGoldhen(PLfile);
+			}
+
+			function load_ToDex(){
+				progress.innerHTML="Payload Sending... Please Wait !!";
+				PLfile = "payloads/ToDex.bin";
+				LoadviaGoldhen(PLfile);
+			}
+
+			function load_WebRTE(){
+				progress.innerHTML="Payload Sending... Please Wait !!";
+				PLfile = "payloads/WebRTE.bin";
+				LoadviaGoldhen(PLfile);
+			}
+			
+			function load_Both(){
+				document.getElementById("progress").innerHTML="Loading Jailbreak.. Please Wait !!"
+				setTimeout(poc, 1500);
+			}
+			
+			function load_payload(payload){
+				if(payload == "app2usb"){
+					load_App2USB();
+				}else if(payload == "backup"){
+					load_BackupDB();
+				}else if(payload == "disableupdates"){
+					load_DisableUpdates();
+				}else if(payload == "dumper"){
+					load_AppDumper();
+				}else if(payload == "enablebrowser"){
+					load_EnableBrowser();
+				}else if(payload == "enableupdates"){
+					load_EnableUpdates();
+				}else if(payload == "exitidu"){
+					load_ExitIDU();
+				}else if(payload == "ftp"){
+					load_FTP();
+				}else if(payload == "orbis"){
+					load_Orbis();
+				}else if(payload == "historyblocker"){
+					load_HistoryBlocker();
+				}else if(payload == "disableaslr"){
+					load_DisableASLR();
+				}else if(payload == "kerneldumper"){
+					load_KernelDumper();
+				}else if(payload == "linuxloader"){
+					load_Linux();
+				}else if(payload == "moduledumper"){
+					load_ModuleDumper();
+				}else if(payload == "permanentuart"){
+					load_permanentuart();
+				}else if(payload == "ps4debug"){
+					load_PS4Debug();
+				}else if(payload == "restore"){
+					load_RestoreDB();
+				}else if(payload == "rifrenamer"){
+					load_RIFRenamer();
+				}else if(payload == "todex"){
+					load_ToDex();
+				}else if(payload == "webrte"){
+					load_WebRTE();
+				}
+			}
+		</script>
+		<h1 id="progress" class="titlehead">PS4 Jailbreak 9.00</h1><hr><br>
+		<input type="hidden" id="psip" value="localhost"/>
+		<div>
+			<table align="center" style="width:600px;margin-top:30px;">
+			<tr>
+			<td align="center" id="exploit" colspan="2">
+			<a href="#" class="button" onclick="load_Both(); return false" style="width:43%">Exploit + GoldHEN V2b</a>
+			</td>
+			</tr>
+			<tr><td><br/></td></tr>
+			<tr>
+			<td colspan="2" align="center"><hr><br></td>
+			</tr>
+			<tr>
+			<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload('app2usb'); return false" style="width:43%">App2USB</a>
+			<a href="#" class="button" onclick="load_payload('ftp'); return false" style="width:43%">FTP</a></td>
+			</tr><tr><td><br/></td></tr>
+			<tr>
+			<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload('disableupdates'); return false" style="width:43%">Disable Updates</a>
+			<a href="#" class="button" onclick="load_payload('enableupdates'); return false" style="width:43%">Enable Updates</a></td>
+			</tr><tr><td><br/></td></tr>
+			<tr>
+			<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload('moduledumper'); return false" style="width:43%"> Module Dumper</a>
+			<a href="#" class="button" onclick="load_payload('kerneldumper'); return false" style="width:43%">Kernel Dumper</a></td>
+			</tr><tr><td><br/></td></tr>
+			<tr>
+			<tr>
+			<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload('restore'); return false" style="width:43%">Restore</a>
+			<a href="#" class="button" onclick="load_payload('backup'); return false" style="width:43%">Backup</a></td>
+			</tr><tr><td><br/></td></tr>
+			<tr>
+			<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload('exitidu'); return false" style="width:43%">Exit IDU</a>
+			<a href="#" class="button" onclick="load_payload('disableaslr'); return false" style="width:43%">Disable ASLR</a></td>
+			</tr><tr><td><br/></td></tr>
+			<tr>
+			<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload('todex'); return false" style="width:43%">To-DEX</a>
+			<a href="#" class="button" onclick="load_payload('permanentuart'); return false" style="width:43%">Permanent UART</a></td>
+			</tr><tr><td><br/></td></tr>
+			<tr>
+			<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload('enablebrowser'); return false" style="width:43%">Enable Browser</a>
+			<a href="#" class="button" onclick="load_payload('historyblocker'); return false" style="width:43%">History Blocker</a></td>
+			</tr>
+			</table></div>
+	</body>
+</html>
