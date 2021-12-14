@@ -1,8 +1,12 @@
 var i = 0;
+
 function go() {
       document.getElementById("psip").style.visibility = "hidden";
       document.getElementById("psip").value = "localhost";
+      document.getElementById("cb").style.visibility = "hidden";
+      removeOptions(document.getElementById("cb"));
 }
+
 
 function addOption(selectbox,text,value )
 
@@ -22,6 +26,7 @@ function removeOptions(selectElement) {
      selectElement.remove(i);
   }
 }
+
 
 var getPayload = function(payload, onLoadEndCallback) {
   var xhr = new XMLHttpRequest();
@@ -44,13 +49,12 @@ var sendPayload = function(url, data, onLoadEndCallback) {
 }
 
 function LoadviaGoldhen(PLfile){
-    var PS4IP = document.getElementById("psip").value;
+  var PS4IP = document.getElementById("psip").value;
 		var xhr = new XMLHttpRequest();
     xhr.open("POST", `http://${PS4IP}:9090/status`);
 		xhr.send();
 		xhr.onerror = function(){
-			progress.innerHTML="Enable Binloader server from GoldHEN under Settings Before Running the Payloads !!";
-			alert("Enable Binloader server from GoldHEN under Settings Before Running the Payloads !!");
+			alert("Load Error , first Enable binloader server from Setting GoldHEN");
 			return;
 		};
 		xhr.onload = function(){
@@ -61,10 +65,10 @@ function LoadviaGoldhen(PLfile){
 				   //Sending bins via IP POST Method
            sendPayload(`http://${PS4IP}:9090`, xhr.response, function (xhr) {
             if (xhr.status === 200) {
-              progress.innerHTML="Payload Loaded Successfully !!";
+              progress.innerHTML="Payload Loaded";
+              alert("Payload Loaded");
 					   }else{
                alert("Can't send the payload");
-			   progress.innerHTML="Process Failed !!";
                return;
               }
 					})
@@ -73,7 +77,6 @@ function LoadviaGoldhen(PLfile){
 			}
 			else {
 				alert("Cannot Load Payload Because binloader Server Is Busy");
-				progress.innerHTML="Process Failed !!";
 				return;
 			}
 		};
