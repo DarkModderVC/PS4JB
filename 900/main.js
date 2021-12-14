@@ -1,28 +1,3 @@
-var i = 0;
-function go() {
-      document.getElementById("psip").style.visibility = "hidden";
-      document.getElementById("psip").value = "localhost";
-}
-
-function addOption(selectbox,text,value )
-
-  {var optn = document.createElement("OPTION");
-
-  optn.text = text;
-
-  optn.value = value;
-
-  selectbox.options.add(optn);
-
-}
-
-function removeOptions(selectElement) {
-  var i, L = selectElement.options.length - 1;
-  for(i = L; i >= 0; i--) {
-     selectElement.remove(i);
-  }
-}
-
 var getPayload = function(payload, onLoadEndCallback) {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', payload);
@@ -45,6 +20,7 @@ var sendPayload = function(url, data, onLoadEndCallback) {
 
 function LoadviaGoldhen(PLfile){
 	var PS4IP = document.getElementById("psip").value;
+	if(PS4IP == ""){var PS4IP = "localhost";}
 		var xhr = new XMLHttpRequest();
     xhr.open("POST", `http://${PS4IP}:9090/status`);
 		xhr.send();

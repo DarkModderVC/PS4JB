@@ -60,7 +60,7 @@
 		<script src="webkit.js"></script>
 		<script type="text/javascript" src="main.js"></script>
 	</head>
-	<body onload="go()" class="bg">
+	<body class="bg">
 		<script>
 			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!"};
 			window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML="Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed"};
@@ -237,7 +237,6 @@
 			}
 		</script>
 		<h1 id="progress" class="titlehead">PS4 Jailbreak 9.00</h1><hr><br>
-		<div><input type="text" placeholder="PS4 IP Here" id="psip"></div>
 		<div>
 			<table align="center" style="width:600px;margin-top:30px;">
 			<tr>
@@ -249,6 +248,9 @@
 			<tr>
 			<td colspan="2" align="center"><hr><br></td>
 			</tr>
+			<tr>
+			<td align="center" colspan="2"><input type="text" placeholder="PS4 IP Here" id="psip"></div></td>
+			</tr><tr><td><br/></td></tr>
 			<tr>
 			<td align="center" colspan="2"><a href="#" class="button" onclick="load_payload('app2usb'); return false" style="width:43%">App2USB</a>
 			<a href="#" class="button" onclick="load_payload('ftp'); return false" style="width:43%">FTP</a></td>
