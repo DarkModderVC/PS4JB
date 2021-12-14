@@ -60,7 +60,7 @@
 		<script src="webkit.js"></script>
 		<script type="text/javascript" src="main.js"></script>
 	</head>
-	<body class="bg">
+	<body onload="go()" class="bg">
 		<script>
 			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!"};
 			window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML="Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed"};
@@ -237,6 +237,7 @@
 			}
 		</script>
 		<h1 id="progress" class="titlehead">PS4 Jailbreak 9.00</h1><hr><br>
+		<div><input type="text" placeholder="PS4 IP Here" id="psip"></div>
 		<div>
 			<table align="center" style="width:600px;margin-top:30px;">
 			<tr>
