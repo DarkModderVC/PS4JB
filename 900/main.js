@@ -44,6 +44,7 @@ var sendPayload = function(url, data, onLoadEndCallback) {
 }
 
 function LoadviaGoldhen(PLfile){
+    var PS4IP = document.getElementById("psip").value;
 		var xhr = new XMLHttpRequest();
     xhr.open("POST", `http://${PS4IP}:9090/status`);
 		xhr.send();
